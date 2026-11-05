@@ -175,7 +175,7 @@
 //       },
 //       {
 //         id: 'd-10',
-//         name: 'Mr. Farhathunnisa',
+//         name: 'Mrs. Farhathunnisa',
 //         role: null,
 //         image: 'farhathunnisa.png',
 //       },
@@ -719,7 +719,7 @@ const getLeadershipImage = (fileName) => {
 const BOARDS_DATA = [
   {
     id: 'trustees',
-    title: 'Board of Trustees – 5 Members',
+    title: 'Board of Trustees',
     description:
       "The core leadership responsible for guiding the foundation's mission, governance and long-term vision.",
     icon: Users,
@@ -734,7 +734,7 @@ const BOARDS_DATA = [
   },
   {
     id: 'advisors',
-    title: 'Board of Advisors – 4 Members',
+    title: 'Board of Advisors',
     description:
       'Esteemed professionals and experts providing strategic guidance, valuable insights and institutional counsel.',
     icon: GraduationCap,
@@ -748,7 +748,7 @@ const BOARDS_DATA = [
   },
   {
     id: 'directors',
-    title: 'Board of Directors – 12 Members',
+    title: 'Board of Directors',
     description:
       "A diverse team of dedicated professionals driving the foundation's initiatives, organizational development and execution of its vision.",
     icon: Landmark,
@@ -1109,9 +1109,6 @@ function BoardRow({ board, shouldReduceMotion }) {
             {board.description}
           </p>
 
-          <p className="mt-3 text-xs font-semibold uppercase tracking-[0.12em] text-saffron">
-            {board.members.length} Members
-          </p>
         </div>
 
         {/* Carousel */}
@@ -1229,7 +1226,7 @@ function BoardRow({ board, shouldReduceMotion }) {
                 <button
                   key={index}
                   type="button"
-                  aria-label={`Go to position ${index + 1} in ${board.title}`}
+                  aria-label={`Go to position in ${board.title}`}
                   aria-current={activeIndex === index ? 'true' : undefined}
                   onClick={() => handleDotClick(index)}
                   className={`h-2 shrink-0 rounded-full transition-all duration-300 ${

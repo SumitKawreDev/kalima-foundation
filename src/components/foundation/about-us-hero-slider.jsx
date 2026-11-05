@@ -47,7 +47,7 @@ export default function AboutUsHeroSlider() {
             <motion.img
               key={activeSlide}
               src={slideImages[activeSlide]}
-              alt={`Kalima Foundation (R.) community and healthcare initiative, image ${activeSlide + 1}`}
+              alt="Kalima Foundation (R.) community and healthcare initiative"
               className="absolute inset-0 size-full object-cover object-center"
               initial={shouldReduceMotion ? false : { opacity: 0, scale: 1.04 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -87,7 +87,7 @@ export default function AboutUsHeroSlider() {
 
               <div
                 className="flex items-center gap-1.5"
-                aria-label={`Slide ${activeSlide + 1} of ${slideImages.length}`}
+                aria-label="Image navigation"
                 aria-live="polite"
               >
                 {slideImages.map((_, index) => (
@@ -95,7 +95,7 @@ export default function AboutUsHeroSlider() {
                     key={index}
                     type="button"
                     onClick={() => showSlide(index)}
-                    aria-label={`Show image ${index + 1}`}
+                    aria-label="Show image"
                     aria-current={activeSlide === index ? 'true' : undefined}
                     className={`h-2 rounded-full transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${
                       activeSlide === index ? 'w-6 bg-saffron' : 'w-2 bg-white/65 hover:bg-white'
