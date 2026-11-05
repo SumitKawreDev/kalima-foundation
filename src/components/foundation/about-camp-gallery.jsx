@@ -117,7 +117,7 @@ export default function AboutCampGallery() {
               <motion.button
                 type="button"
                 onClick={() => setActiveIndex(index)}
-                aria-label={`Open photograph ${index + 1} of ${campImages.length}`}
+                aria-label="Open photograph"
                 whileHover={shouldReduceMotion ? undefined : { y: -6 }}
                 whileTap={shouldReduceMotion ? undefined : { scale: 0.985 }}
                 transition={{ duration: 0.3, ease: 'easeOut' }}
@@ -125,7 +125,7 @@ export default function AboutCampGallery() {
               >
                 <img
                   src={image.src}
-                  alt={`Free medical camp organised by Kalima Foundation (R.), photograph ${index + 1}`}
+                  alt="Free medical camp organised by Kalima Foundation (R.)"
                   loading="lazy"
                   decoding="async"
                   className="absolute inset-0 size-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.06]"
@@ -135,10 +135,6 @@ export default function AboutCampGallery() {
                   className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#052e26]/90 via-[#052e26]/25 to-[#052e26]/5 opacity-90 transition-opacity duration-300 group-hover:opacity-100"
                   aria-hidden="true"
                 />
-
-                <span className="pointer-events-none absolute left-4 top-4 inline-flex items-center rounded-full border border-white/25 bg-forest-deep/45 px-2.5 py-1 text-[10px] font-extrabold tracking-[0.14em] text-white/90 backdrop-blur-sm">
-                  {String(index + 1).padStart(2, '0')}
-                </span>
 
                 <span className="pointer-events-none absolute inset-x-0 bottom-0 flex items-end justify-between gap-3 p-4 sm:p-5">
                   <span className="min-w-0 text-left">
@@ -170,7 +166,7 @@ export default function AboutCampGallery() {
           <motion.div
             role="dialog"
             aria-modal="true"
-            aria-label={`Photograph ${activeIndex + 1} of ${campImages.length}`}
+            aria-label="Camp photograph"
             className="fixed inset-0 z-[100] flex flex-col bg-[#03231c]/95 backdrop-blur-md"
             initial={shouldReduceMotion ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -179,10 +175,6 @@ export default function AboutCampGallery() {
             onClick={closeLightbox}
           >
             <div className="flex items-center justify-between gap-4 px-4 py-4 sm:px-8 sm:py-5">
-              <span className="text-xs font-extrabold uppercase tracking-[0.2em] text-white/70">
-                {String(activeIndex + 1).padStart(2, '0')} / {String(campImages.length).padStart(2, '0')}
-              </span>
-
               <button
                 type="button"
                 onClick={closeLightbox}
@@ -197,7 +189,7 @@ export default function AboutCampGallery() {
               <motion.img
                 key={activeImage.name}
                 src={activeImage.src}
-                alt={`Free medical camp organised by Kalima Foundation (R.), photograph ${activeIndex + 1}`}
+                alt="Free medical camp organised by Kalima Foundation (R.)"
                 className="max-h-full max-w-full rounded-xl object-contain shadow-2xl sm:rounded-2xl"
                 initial={shouldReduceMotion ? false : { opacity: 0, scale: 0.97 }}
                 animate={{ opacity: 1, scale: 1 }}
