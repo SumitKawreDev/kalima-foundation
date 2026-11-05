@@ -1,0 +1,5 @@
+# pnpm 12 blocks dependency build scripts by default and fails the install
+# when a required one is skipped (ERR_PNPM_IGNORED_BUILDS).
+# esbuild (used by Vite) needs its postinstall step to install its binary.
+allowBuilds:
+  esbuild: true
