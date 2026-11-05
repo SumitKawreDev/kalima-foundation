@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import LeadershipSection from './LeadershipSection'
+import AboutCampGallery from './about-camp-gallery'
 import AboutUsHeroSlider from './about-us-hero-slider'
 import { SiteFooter } from './site-footer'
 import { SiteHeader } from './site-header'
@@ -21,6 +22,7 @@ export default function AboutUsPage() {
       <SiteHeader />
       <main>
         <AboutUsHeroSlider />
+        <AboutCampGallery />
         <LeadershipSection />
       </main>
       <SiteFooter />
