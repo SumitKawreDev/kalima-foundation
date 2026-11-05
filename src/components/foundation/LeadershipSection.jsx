@@ -759,7 +759,7 @@ const BOARDS_DATA = [
       { id: 'd-3', name: 'Dr. HariKrishna DS', role: null, image: 'harikrishna-ds.png' },
       { id: 'd-4', name: 'Dr. Anamika Das', role: null, image: 'anamika-das.png' },
       { id: 'd-5', name: 'Dr. Namira Sheikh', role: null, image: 'namira-sheikh.png' },
-      { id: 'd-6', name: 'Dr. Azma Andar', role: null, image: 'azma-ansar.png' },
+      { id: 'd-6', name: 'Dr. Azma Ansar', role: null, image: 'azma-ansar.png' },
       { id: 'd-7', name: 'Mr. Ramananda Shirva', role: null, image: 'ramananda-shirva.png' },
       { id: 'd-8', name: 'Mr. Asrar Ahmed Katingeri', role: null, image: 'asrar-ahmed.png' },
       { id: 'd-9', name: 'Mr. Habibur Rahman Jemai', role: null, image: 'habibur-rahman.png' },

@@ -178,13 +178,12 @@ export function AboutSection() {
           {/* ABOUT IMAGE */}
           <figure
             data-reveal="scale"
-            data-image-reveal
-            className="image-frame group relative min-h-[420px] overflow-hidden rounded-[2rem] bg-forest shadow-[0_28px_70px_rgba(22,67,52,0.2)] sm:min-h-[500px] lg:min-h-[560px]"
+            className="image-frame group relative block min-h-[420px] w-full min-w-0 overflow-hidden rounded-[2rem] bg-forest shadow-[0_28px_70px_rgba(22,67,52,0.2)] sm:min-h-[500px] lg:min-h-[560px]"
           >
             <img
               src={foundationAssets.aboutCommunity}
               alt="Mothers and children gathered at a community programme"
-              className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+              className="absolute inset-0 block h-full w-full max-w-none object-cover object-center transition-transform duration-700 group-hover:scale-105"
               loading="lazy"
               decoding="async"
             />
