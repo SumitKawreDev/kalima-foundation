@@ -1,8 +1,5 @@
 import {
   ArrowUpRight,
-  Baby,
-  BookOpen,
-  Briefcase,
   Check,
   Heart,
   HeartHandshake,
@@ -16,100 +13,100 @@ import { BrandLogo } from './brand-logo'
 import { SpotlightCard } from './premium-ui'
 
 const approachAreas = [
-  'Humanity and Compassion',
-  'Healthcare Accessibility',
-  'Education and Empowerment',
-  'Community Development',
-  'Transparency and Accountability',
-  'Sustainable Social Impact',
+  'Free Medical Camps',
+  'Free Generic Medicines',
+  'Patient Assistance',
+  'Healthcare Awareness',
+  'Medical Education',
+  'Research & Development',
 ]
 
 const focusAreas = [
   {
     icon: HeartPulse,
-    title: 'Healthcare & Medical Support',
+    title: 'Free Medical Camps',
     description:
-      'Working towards accessible and affordable healthcare through patient assistance, medical camps, awareness initiatives and healthcare infrastructure development.',
-  },
-  {
-    icon: BookOpen,
-    title: 'Education & Learning',
-    description:
-      'Supporting disadvantaged children through educational materials, literacy programs, scholarships and learning opportunities.',
-  },
-  {
-    icon: Baby,
-    title: 'Women & Child Welfare',
-    description:
-      'Supporting pregnant women, new mothers, children and vulnerable families through community-focused initiatives.',
+      'Bringing basic health check-ups, medical guidance and healthcare awareness closer to underserved communities.',
   },
   {
     icon: Heart,
-    title: 'Food & Community Security',
+    title: 'Free Generic Medicine Distribution',
     description:
-      'Working towards food security and essential support for economically disadvantaged families.',
+      'Helping people who cannot easily afford essential generic medicines by distributing them free of cost.',
   },
   {
-    icon: Briefcase,
-    title: 'Employment & Skill Development',
+    icon: HeartHandshake,
+    title: 'Patient Assistance',
     description:
-      'Encouraging opportunities for unemployed individuals through skill development, training and community empowerment.',
+      'Supporting deserving patients and families who need help accessing medical care and assistance.',
+  },
+  {
+    icon: Sparkles,
+    title: 'Healthcare Awareness',
+    description:
+      'Encouraging preventive healthcare, early diagnosis, medical consultation and healthy living.',
   },
   {
     icon: Users,
-    title: 'Community Development',
+    title: 'Community Healthcare',
     description:
-      'Collaborating with local communities, NGOs and institutions to address social challenges and create sustainable solutions.',
+      'Reaching underserved communities and working to ensure financial difficulties do not stand in the way of care.',
   },
 ]
 
 const missionGoals = [
-  'Improve access to quality healthcare.',
-  'Support underprivileged families and patients.',
-  'Promote education for disadvantaged children.',
-  'Organize healthcare awareness and medical camps.',
-  'Empower women, children and vulnerable communities.',
-  'Encourage employment and skill development.',
-  'Develop sustainable community initiatives.',
-  'Build partnerships for long-term social development.',
-]
-
-const responseAreas = [
-  'Free medical camps and health check-up initiatives.',
-  'Health awareness and preventive healthcare programs.',
-  'Medical assistance for deserving patients.',
-  'Maternal and child healthcare support.',
-  'Healthcare education and research collaborations.',
-  'Community outreach programs.',
-  'Technology-enabled healthcare solutions.',
-  'Partnerships with hospitals and medical institutions.',
+  'Organize free medical camps for underserved communities.',
+  'Distribute generic medicines free of cost to deserving patients.',
+  'Support individuals and families who need medical assistance.',
+  'Develop an integrated Global Medical City.',
+  'Establish medical education and college facilities.',
+  'Promote multidisciplinary medical research.',
+  'Encourage innovation through dedicated R&D facilities.',
+  'Build collaborations with healthcare professionals and institutions.',
+  'Support preventive healthcare and public awareness.',
+  'Make quality healthcare more accessible and affordable.',
 ]
 
 const communities = [
   {
-    title: 'Underprivileged Communities',
+    title: 'Economically Disadvantaged Families',
     description:
-      'Rural and urban poor, marginalized groups and economically vulnerable families.',
+      'Families who face financial barriers to healthcare and essential support.',
   },
   {
-    title: 'Disadvantaged Children',
+    title: 'Rural and Underserved Communities',
     description:
-      'Children from low-income families, orphans and those with limited access to education and healthcare.',
+      'People in communities with limited access to healthcare services and assistance.',
   },
   {
-    title: 'Patients in Need',
+    title: 'Patients Requiring Medical Assistance',
     description:
-      'Individuals requiring medical treatment, financial assistance, rehabilitation and healthcare support.',
+      'Individuals who need help accessing medical care and patient assistance.',
   },
   {
-    title: 'Women and Children',
+    title: 'Children from Disadvantaged Backgrounds',
     description:
-      'Pregnant women, new mothers and children under five.',
+      'Children who face barriers to essential healthcare and community support.',
   },
   {
-    title: 'Remote and Rural Communities',
+    title: 'Women and Mothers',
     description:
-      'People living in rural and tribal regions with limited access to essential healthcare services.',
+      'Women and mothers who need access to healthcare and patient assistance.',
+  },
+  {
+    title: 'Senior Citizens',
+    description:
+      'Older people who may need accessible healthcare and community support.',
+  },
+  {
+    title: 'People with Limited Healthcare Access',
+    description:
+      'Individuals and families who have difficulty reaching essential healthcare services.',
+  },
+  {
+    title: 'Future Healthcare Professionals',
+    description:
+      'Students aspiring to pursue healthcare education and professional development.',
   },
 ]
 
@@ -125,9 +122,8 @@ export function AboutSection() {
             <p className="eyebrow">Who we are</p>
 
             <h2 className="font-editorial mt-5 max-w-[620px] break-words text-[clamp(2.7rem,5vw,3.9rem)] leading-[1.05] tracking-[-0.045em] text-forest">
-              Built on compassion,{' '}
-              <em className="font-normal text-saffron">unity</em> and
-              responsibility.
+              A healthier future, built{' '}
+              <em className="font-normal text-saffron">together.</em>
             </h2>
 
             <p className="mt-6 max-w-[600px] break-words text-sm leading-7 text-ink/75 sm:text-base sm:leading-8">
@@ -135,41 +131,46 @@ export function AboutSection() {
               <strong className="font-bold text-forest">
                 18 July 2023
               </strong>
-              , is a charitable organization built on the principles of
-              compassion, unity and social responsibility.
+              , is a charitable organization dedicated to humanity, healthcare,
+              education and community development.
             </p>
 
             <p className="mt-5 max-w-[620px] break-words text-sm leading-7 text-ink/75 sm:text-base sm:leading-8">
-              Our foundation brings together people from diverse backgrounds,
-              ideologies and communities with one common purpose: serving
-              humanity. We focus on supporting underprivileged communities,
-              improving healthcare accessibility, promoting education and
-              creating opportunities for people who need them most.
+              We believe every person deserves proper medical care, essential
+              medicines and opportunities for a better life. We organize free
+              medical camps and distribute generic medicines free of cost to
+              people in need.
             </p>
-
             <p className="mt-5 max-w-[620px] break-words text-sm leading-7 text-ink/75 sm:text-base sm:leading-8">
-              We believe in being{' '}
+              Our philosophy is simple:{' '}
               <strong className="font-bold text-forest">
-                DFO – Different From Others
-              </strong>{' '}
-              – through our commitment to thinking differently, planning
-              responsibly and taking meaningful action.
+                From the People, By the People, To the People.
+              </strong>
+            </p>
+            <p className="mt-5 max-w-[620px] break-words text-sm leading-7 text-ink/75 sm:text-base sm:leading-8">
+              Our long-term vision is a Global Medical City integrating patient
+              care, medical education, research, innovation and healthcare
+              infrastructure, with patient welfare at its heart.
+            </p>
+            <p className="mt-5 max-w-[620px] break-words text-sm leading-7 text-ink/75 sm:text-base sm:leading-8">
+              We are committed to making healthcare accessibility and patient
+              welfare the heart of every initiative.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3">
               <span className="inline-flex items-center gap-2 text-[10px] font-extrabold uppercase tracking-[0.18em] text-forest/55">
                 <span className="size-1.5 shrink-0 rounded-full bg-saffron" />
-                Compassion-led
+                Patients first
               </span>
 
               <span className="inline-flex items-center gap-2 text-[10px] font-extrabold uppercase tracking-[0.18em] text-forest/55">
                 <span className="size-1.5 shrink-0 rounded-full bg-mint" />
-                Community-first
+                Humanity always
               </span>
 
               <span className="inline-flex items-center gap-2 text-[10px] font-extrabold uppercase tracking-[0.18em] text-forest/55">
                 <span className="size-1.5 shrink-0 rounded-full bg-saffron" />
-                Transparent
+                Healthcare access
               </span>
             </div>
           </div>
@@ -292,27 +293,38 @@ export function VisionMissionSection() {
             </p>
 
             <h2 className="font-editorial mt-5 max-w-[610px] break-words text-[clamp(2.5rem,4.7vw,3.75rem)] leading-[1.08] tracking-[-0.035em] text-white">
-              Rebuilding Human Dignity and Empowering Communities
+              A Global Medical Hub for Humanity
             </h2>
 
             <p className="mt-6 max-w-[570px] break-words text-sm leading-7 text-white/70 sm:text-base sm:leading-8">
-              Our vision is to rebuild the dignity of poor and marginalized
-              communities through empowerment, healthcare, education, food
-              security and employment opportunities.
+              Our vision is to establish a Global Medical City bringing
+              healthcare services, medical education, specialized treatment,
+              research and development together.
             </p>
 
             <p className="mt-4 max-w-[570px] break-words text-sm leading-7 text-white/70 sm:text-base sm:leading-8">
-              We aspire to create a sustainable society where everyone has the
-              opportunity to live a healthier, safer and more dignified life.
+              We aim to connect patients, doctors, medical professionals,
+              researchers, students and healthcare institutions to advance
+              medical science and human well-being.
             </p>
 
-            <div className="mt-8 flex items-center gap-3">
-              <span className="h-px w-10 shrink-0 bg-saffron/70" />
-
-              <span className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-white/45">
-                Dignity in every step
-              </span>
-            </div>
+            <ul className="mt-7 grid gap-3 sm:grid-cols-2">
+              {[
+                'Accessible healthcare for every individual',
+                'Patient-first medical services',
+                'Global-standard medical education',
+                'Multispecialty healthcare facilities',
+                'Advanced medical research centres',
+                'Research and Development (R&D)',
+                'Affordable and free healthcare initiatives',
+                'Sustainable medical infrastructure',
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-2.5 text-sm leading-6 text-white/75">
+                  <Check aria-hidden="true" className="mt-1 size-4 shrink-0 text-saffron" />
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div data-reveal="right" className="min-w-0">
@@ -321,13 +333,13 @@ export function VisionMissionSection() {
             </p>
 
             <h3 className="font-editorial mt-5 max-w-[620px] break-words text-[clamp(2.5rem,4.7vw,3.75rem)] leading-[1.08] tracking-[-0.035em] text-white">
-              Bringing People Together for Meaningful Change
+              Healthcare First. Patients Always.
             </h3>
 
             <p className="mt-6 max-w-[570px] break-words text-sm leading-7 text-white/70 sm:text-base sm:leading-8">
-              Our mission is to bring visionary initiatives under one united
-              platform where innovation, compassion and community development
-              grow together.
+              Our mission is to serve humanity by improving healthcare
+              accessibility and creating opportunities for medical
+              advancement.
             </p>
 
             <div className="mt-8 flex min-w-0 items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.055] px-5 py-4 backdrop-blur-sm">
@@ -337,8 +349,8 @@ export function VisionMissionSection() {
               />
 
               <p className="min-w-0 break-words text-sm leading-6 text-white/75">
-                When compassion becomes collective action, whole communities
-                begin to rise.
+                No patient should be left behind because of financial
+                difficulties.
               </p>
             </div>
           </div>
@@ -364,7 +376,7 @@ export function VisionMissionSection() {
             </span>
           </div>
 
-          <ul className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
+          <ul className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
             {missionGoals.map((goal, index) => (
               <li
                 key={goal}
@@ -392,18 +404,18 @@ export function FocusSection() {
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div data-reveal="up" className="mx-auto max-w-[780px] text-center">
-          <p className="eyebrow">Our key focus areas</p>
+          <p className="eyebrow">Our current healthcare initiatives</p>
 
           <h2 className="font-editorial mt-5 break-words text-[clamp(2.6rem,5vw,4rem)] leading-[1.08] tracking-[-0.04em] text-forest">
-            Where your support{' '}
-            <em className="font-normal text-saffron">takes root.</em>
+            Serving humanity through{' '}
+            <em className="font-normal text-saffron">free healthcare.</em>
           </h2>
         </div>
 
         <figure
           data-reveal="scale"
           data-image-reveal
-          className="image-frame group relative mt-10 min-h-[500px] overflow-hidden rounded-[1.75rem] bg-forest sm:mt-12 sm:min-h-[380px] sm:rounded-[2rem] lg:min-h-[440px]"
+          className="image-frame group relative mt-10 min-h-[340px] overflow-hidden rounded-[1.75rem] bg-forest sm:mt-12 sm:min-h-[380px] sm:rounded-[2rem] lg:min-h-[440px]"
         >
           <img
             src={foundationAssets.healthCheckup}
@@ -429,7 +441,7 @@ export function FocusSection() {
             </p>
 
             <p className="font-editorial mt-2 break-words text-[clamp(1.3rem,2.4vw,1.9rem)] leading-[1.15] text-white">
-              Every check-up is a step towards a healthier community.
+              No patient should be left behind because of financial difficulties.
             </p>
           </figcaption>
 
@@ -441,6 +453,11 @@ export function FocusSection() {
             Care in action
           </span>
         </figure>
+
+        <p className="mx-auto mt-8 max-w-[760px] text-center text-sm leading-7 text-ink/70 sm:text-base sm:leading-8">
+          Kalima Foundation &amp; Charitable Trust is committed to taking
+          healthcare closer to people facing financial and access barriers.
+        </p>
 
         <div className="mt-5 grid min-w-0 gap-4 sm:grid-cols-2 lg:mt-6 lg:grid-cols-3 lg:gap-5">
           {focusAreas.map(
@@ -491,28 +508,30 @@ export function FocusSection() {
             ),
           )}
         </div>
+        <p data-reveal="up" className="font-editorial mx-auto mt-8 max-w-[780px] text-center text-xl leading-snug text-forest sm:text-2xl">
+          No Patient Should Be Left Behind Because of Financial Difficulties.
+        </p>
       </div>
     </section>
   )
 }
 
-export function HealthcareApproachSection() {
+export function MultiResearchCentreSection() {
   return (
-    <section className="section-glow bg-paper py-20 sm:py-28">
+    <section id="research" className="section-glow bg-paper py-20 sm:py-28">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:gap-16">
         <div data-reveal="left" className="min-w-0">
-          <p className="eyebrow">
-            Healthcare challenges – our approach
-          </p>
+          <p className="eyebrow">Multidisciplinary research centre</p>
 
           <h2 className="font-editorial mt-5 max-w-[570px] break-words text-[clamp(2.7rem,4.8vw,3.8rem)] leading-[1.06] tracking-[-0.04em] text-forest">
-            Healthy Communities, Hopeful Futures
+            Advancing Medical Knowledge Through Research
           </h2>
 
           <p className="mt-6 max-w-[560px] break-words text-sm leading-7 text-ink/70 sm:text-base sm:leading-8">
-            Many communities face healthcare challenges due to limited
-            medical facilities, financial difficulties, lack of awareness
-            and shortages of trained healthcare professionals.
+            Research is a fundamental pillar of our Global Medical City
+            vision. We aim to bring medical professionals, researchers,
+            academic institutions and healthcare experts together to improve
+            healthcare practices and contribute to medical science.
           </p>
 
           <div className="group relative mt-8 max-w-[540px] overflow-hidden rounded-[1.5rem] bg-saffron/20 px-6 py-6 transition-colors duration-500 hover:bg-saffron/25 sm:px-8 sm:py-7">
@@ -522,12 +541,11 @@ export function HealthcareApproachSection() {
             />
 
             <p className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-forest/65">
-              Our belief
+              Our research vision
             </p>
 
             <p className="font-editorial mt-3 break-words text-[22px] leading-snug text-forest sm:text-[27px]">
-              Healthcare should be accessible, affordable and centered on
-              human dignity.
+              Our objective is to encourage innovation, improve healthcare practices and contribute to medical science.
             </p>
 
             <span className="mt-5 inline-flex items-center gap-2 text-[9px] font-extrabold uppercase tracking-[0.18em] text-forest/50">
@@ -535,13 +553,22 @@ export function HealthcareApproachSection() {
                 aria-hidden="true"
                 className="size-3.5 shrink-0 text-forest/70"
               />
-              Dignity at the centre
+              Research for humanity
             </span>
           </div>
         </div>
 
         <div className="grid min-w-0 gap-3 sm:grid-cols-2">
-          {responseAreas.map((area, index) => (
+          {[
+            'Clinical and medical research',
+            'Public health research',
+            'Preventive healthcare',
+            'Medical technology innovation',
+            'Healthcare infrastructure research',
+            'Diagnostic and treatment research',
+            'Medical education and training',
+            'Interdisciplinary research collaboration',
+          ].map((area, index) => (
             <SpotlightCard
               key={area}
               data-reveal="up"
@@ -572,6 +599,104 @@ export function HealthcareApproachSection() {
   )
 }
 
+const medicalCollegeObjectives = [
+  'Medical education institutions.',
+  'Nursing and healthcare colleges.',
+  'Medical training and skill development.',
+  'Academic and research collaborations.',
+  'Medical laboratories and research facilities.',
+  'Professional healthcare development.',
+  'Knowledge exchange and innovation.',
+]
+
+export function MedicalCollegeCitySection() {
+  return (
+    <section id="medical-education" className="bg-white py-20 sm:py-28">
+      <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:gap-16">
+        <div data-reveal="left" className="min-w-0">
+          <p className="eyebrow">Global Medical College City</p>
+          <h2 className="font-editorial mt-5 max-w-[620px] break-words text-[clamp(2.7rem,4.8vw,3.8rem)] leading-[1.06] tracking-[-0.04em] text-forest">
+            Education. Research. Innovation. Healthcare.
+          </h2>
+          <p className="mt-6 max-w-[600px] text-sm leading-7 text-ink/70 sm:text-base sm:leading-8">
+            Kalima Foundation aims to develop the Global Medical City as a
+            medical education and healthcare destination. The proposed Medical
+            College City will create opportunities for students, doctors,
+            researchers and healthcare professionals.
+          </p>
+          <p className="mt-4 max-w-[600px] text-sm leading-7 text-ink/70 sm:text-base sm:leading-8">
+            We envision a connected ecosystem where medical education and
+            practical healthcare experience complement each other.
+          </p>
+        </div>
+
+        <div className="grid min-w-0 gap-3 sm:grid-cols-2">
+          {medicalCollegeObjectives.map((objective, index) => (
+            <SpotlightCard
+              key={objective}
+              data-reveal="up"
+              className="premium-card group flex min-h-[88px] min-w-0 items-start gap-3 rounded-[1.25rem] border border-forest/5 bg-paper px-4 py-5 shadow-[0_10px_30px_rgba(23,71,54,0.035)] hover:border-saffron/30 hover:shadow-[0_20px_50px_rgba(23,71,54,0.09)] sm:px-5"
+            >
+              <span className="font-editorial shrink-0 text-lg text-saffron">0{index + 1}</span>
+              <span className="min-w-0 text-sm leading-6 text-ink/75">{objective}</span>
+            </SpotlightCard>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+const researchDevelopmentObjectives = [
+  'Support medical research initiatives.',
+  'Encourage healthcare innovation.',
+  'Explore advanced medical technologies.',
+  'Promote collaboration with research institutions.',
+  'Support medical education and scientific development.',
+  'Improve healthcare accessibility through innovation.',
+  'Encourage research-driven healthcare solutions.',
+]
+
+export function ResearchDevelopmentSection() {
+  return (
+    <section id="research-development" className="section-glow bg-paper py-20 sm:py-28">
+      <div className="mx-auto max-w-7xl px-5 sm:px-8">
+        <div data-reveal="up" className="mx-auto max-w-[820px] text-center">
+          <p className="eyebrow">Research &amp; Development – an important part of GMC</p>
+          <h2 className="font-editorial mt-5 break-words text-[clamp(2.7rem,5vw,4rem)] leading-[1.06] tracking-[-0.045em] text-forest">
+            Innovating Today for{' '}
+            <em className="font-normal text-saffron">Better Healthcare Tomorrow.</em>
+          </h2>
+          <p className="mt-5 text-sm leading-7 text-ink/70 sm:text-base sm:leading-8">
+            Research and Development will form an essential part of the Global
+            Medical City. We aim to encourage new ideas, medical innovation,
+            scientific research and technology-driven healthcare solutions.
+          </p>
+        </div>
+
+        <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {researchDevelopmentObjectives.map((objective, index) => (
+            <SpotlightCard
+              key={objective}
+              data-reveal="up"
+              className="premium-card flex min-h-[92px] min-w-0 items-start gap-3 rounded-[1.25rem] border border-forest/5 bg-white px-4 py-5 shadow-[0_10px_30px_rgba(23,71,54,0.035)] sm:px-5"
+            >
+              <Check aria-hidden="true" className="mt-1 size-4 shrink-0 text-forest" />
+              <span className="min-w-0 flex-1 text-sm leading-6 text-ink/75">{objective}</span>
+              <span className="font-editorial shrink-0 text-sm text-forest/30">0{index + 1}</span>
+            </SpotlightCard>
+          ))}
+        </div>
+
+        <p data-reveal="up" className="font-editorial mx-auto mt-10 max-w-[850px] text-center text-xl leading-snug text-forest sm:text-2xl">
+          Research Creates Knowledge. Innovation Creates Possibilities.
+          Healthcare Creates Hope.
+        </p>
+      </div>
+    </section>
+  )
+}
+
 export function WhoWeServeSection() {
   return (
     <section className="section-glow bg-paper pb-20 sm:pb-28">
@@ -585,17 +710,20 @@ export function WhoWeServeSection() {
             </h2>
 
             <p className="mt-5 max-w-[730px] break-words text-sm leading-7 text-ink/75 sm:text-base sm:leading-8">
-              Our initiatives are designed to support communities and
-              individuals who need assistance the most.
+              We aim to serve people who deserve dignity, care and an
+              opportunity for a healthier future.
             </p>
 
             <div className="mt-7 flex flex-wrap gap-2.5">
               {[
-                'Rural families',
-                'Children',
+                'Families facing financial barriers',
+                'Rural communities',
                 'Patients',
-                'Women',
-                'Remote communities',
+                'Children',
+                'Women and mothers',
+                'Senior citizens',
+                'People with limited healthcare access',
+                'Healthcare students',
               ].map((tag) => (
                 <span
                   key={tag}

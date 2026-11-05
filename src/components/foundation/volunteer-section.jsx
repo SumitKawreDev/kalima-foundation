@@ -1,13 +1,15 @@
-import { ArrowUpRight, HeartHandshake, Sparkles } from 'lucide-react'
+import { ArrowUpRight, HeartHandshake } from 'lucide-react'
 import { foundationAssets } from './assets'
 import { SpotlightCard } from './premium-ui'
 
 const waysToHelp = [
-  'Medical and healthcare assistance.',
-  'Education and student support.',
-  'Social awareness campaigns.',
-  'Community welfare activities.',
-  'Event management and volunteering.',
+  'Medical camp volunteering.',
+  'Healthcare awareness activities.',
+  'Generic medicine distribution initiatives.',
+  'Patient assistance.',
+  'Education and healthcare training.',
+  'Research and academic collaboration.',
+  'Community development.',
   'Fundraising and outreach.',
 ]
 
@@ -15,7 +17,6 @@ const socialLinks = [
   { label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=100069531152861' },
   { label: 'Instagram', href: 'https://www.instagram.com/kalima_fct' },
   { label: 'Telegram', href: 'https://t.me/kalimafct' },
-  { label: 'YouTube', href: 'https://www.youtube.com/@kalima-fct' },
 ]
 
 export function VolunteerSection() {
@@ -26,10 +27,10 @@ export function VolunteerSection() {
           <div data-reveal="left">
             <p className="eyebrow">Become a volunteer</p>
             <h2 className="font-editorial mt-5 max-w-[690px] text-[clamp(2.7rem,5vw,4rem)] leading-[1.06] tracking-[-0.045em] text-forest">
-              Your Time Can Change <em className="font-normal text-saffron">Someone&apos;s Life.</em>
+              Be a Part of Our <em className="font-normal text-saffron">Healthcare Mission.</em>
             </h2>
             <p className="mt-5 max-w-[620px] text-sm leading-7 text-ink/70 sm:text-base sm:leading-8">
-              Join hands with Kalima Foundation &amp; Charitable Trust and become part of a community committed to humanity.
+              We welcome individuals, healthcare professionals, students, researchers and socially responsible organizations to join our mission.
             </p>
             <a
               href="https://t.me/kalimafct"
@@ -39,7 +40,7 @@ export function VolunteerSection() {
               data-magnetic-strength="0.16"
               className="group mt-7 inline-flex min-h-12 items-center gap-2 rounded-full bg-saffron px-6 text-[13px] font-bold text-forest-deep shadow-[0_14px_35px_rgba(239,161,43,0.2)] transition-all hover:-translate-y-0.5 hover:bg-[#f6b342]"
             >
-              Join as a Volunteer
+              Become a Volunteer
               <ArrowUpRight
                 aria-hidden="true"
                 className="size-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
@@ -47,7 +48,6 @@ export function VolunteerSection() {
             </a>
             <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
               <span className="inline-flex items-center gap-2 text-[10px] font-extrabold uppercase tracking-[0.18em] text-forest/45">
-                {/* <Sparkles aria-hidden="true" className="size-3.5 text-saffron" /> */}
                 Give your time
               </span>
               <span className="inline-flex items-center gap-2 text-[10px] font-extrabold uppercase tracking-[0.18em] text-forest/45">
@@ -76,7 +76,12 @@ export function VolunteerSection() {
                 </SpotlightCard>
               ))}
             </ul>
-            <p className="font-editorial mt-6 text-xl italic text-forest sm:text-2xl">Together, We Can Make a Difference.</p>
+            <p className="font-editorial mt-6 text-xl italic text-forest sm:text-2xl">
+              Together, we can create a meaningful difference in people&apos;s lives.
+            </p>
+            <p className="mt-2 text-sm font-semibold text-forest/70">
+              Become a volunteer. Become a reason for someone&apos;s hope.
+            </p>
           </div>
         </div>
 
@@ -113,9 +118,9 @@ export function VolunteerSection() {
         <div className="mx-auto flex max-w-7xl flex-col gap-7 px-5 sm:px-8 md:flex-row md:items-end md:justify-between">
           <div data-reveal="left">
             <p className="eyebrow">Connect with us</p>
-            <h2 className="font-editorial mt-3 text-[clamp(2rem,3.5vw,2.8rem)] leading-tight text-forest">Let&apos;s Work Together for Humanity.</h2>
+            <h2 className="font-editorial mt-3 text-[clamp(2rem,3.5vw,2.8rem)] leading-tight text-forest">Let&apos;s Build a Healthier Future Together.</h2>
             <p className="mt-3 max-w-[650px] text-sm leading-6 text-ink/75">
-              Follow our activities, initiatives and updates through our official social media channels.
+              Follow Kalima Foundation &amp; Charitable Trust for updates about our healthcare initiatives, medical camps, free medicine distribution and Global Medical City vision.
             </p>
           </div>
           <nav aria-label="Social media" className="flex flex-wrap gap-3" data-reveal="right">

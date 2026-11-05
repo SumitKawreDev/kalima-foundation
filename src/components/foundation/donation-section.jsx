@@ -40,40 +40,40 @@ const accounts = [
 
 const donationCategories = [
   {
-    title: 'Healthcare Initiatives',
+    title: 'Healthcare Activities',
     icon: HeartPulse,
     items: [
-      'Medical treatment assistance.',
-      'Medicines and hospital care support.',
-      'Free medical camps and health awareness programs.',
-      'Healthcare infrastructure development.',
+      'Free medical camps and health awareness.',
+      'Free generic medicine distribution.',
+      'Medical assistance for deserving patients.',
     ],
   },
   {
-    title: 'Education Programs',
+    title: 'Global Medical City Development',
     icon: BookOpen,
     items: [
-      'Books and educational materials.',
-      'Scholarships and education assistance.',
-      'Literacy and learning initiatives.',
+      'Healthcare infrastructure initiatives.',
+      'Medical education development.',
+      'Research and development initiatives.',
+      'Medical facilities and equipment, subject to project requirements.',
     ],
   },
   {
-    title: 'Community Development',
+    title: 'Education & Community Welfare',
     icon: Users,
     items: [
-      'Community welfare initiatives.',
-      'Collaboration with NGOs and local institutions.',
-      'Volunteer and social development activities.',
+      'Educational assistance and healthcare training.',
+      'Community development programs.',
+      'Social welfare activities.',
     ],
   },
   {
-    title: 'Operational & Administrative Support',
+    title: 'Administrative & Operational Support',
     icon: ShieldCheck,
     items: [
-      'Program management.',
+      'Program coordination.',
       'Essential operational expenses.',
-      'Administrative and coordination costs.',
+      'Administrative and project management requirements.',
     ],
   },
 ]
@@ -144,10 +144,10 @@ export function DonationSection() {
           <div data-reveal="up" className="max-w-[800px]">
             <p className="eyebrow">Donation utilisation</p>
             <h2 className="font-editorial mt-5 text-[clamp(2.7rem,5vw,4rem)] leading-[1.06] tracking-[-0.045em] text-forest">
-              Your Contribution Can Make a Difference
+              Your Contribution Can Support Humanity
             </h2>
             <p className="mt-5 max-w-[760px] text-sm leading-7 text-ink/75 sm:text-base sm:leading-8">
-              Every contribution can support meaningful social initiatives and help improve the lives of people in need. Donations are intended to support the following areas:
+              Your contribution can help strengthen healthcare initiatives and support the Global Medical City vision. Donations are intended to support the following charitable activities:
             </p>
           </div>
 
@@ -188,7 +188,7 @@ export function DonationSection() {
 
           <p data-reveal="up" className="mt-7 flex items-start gap-2.5 text-xs leading-6 text-ink/65">
             <ShieldCheck aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-forest/65" />
-            Kalima Foundation &amp; Charitable Trust aims to utilize contributions responsibly and efficiently in support of its charitable objectives.
+            Contributions are used responsibly in accordance with the Trust&apos;s charitable objectives and applicable regulations.
           </p>
         </div>
       </section>
@@ -207,18 +207,18 @@ export function DonationSection() {
                 </span>
               </div>
               <h2
-                aria-label="Be a Part of Someone's Hope."
+                aria-label="Together, We Can Make Healthcare Accessible."
                 className="donation-title font-editorial mt-5 max-w-[760px] text-[clamp(2.35rem,5vw,4rem)] leading-[1.06] tracking-[-0.04em] text-white"
               >
-                {['Be', 'a', 'Part', 'of', "Someone's"].map((word) => (
+                {['Together,', 'We', 'Can', 'Make', 'Healthcare'].map((word) => (
                   <span key={word} data-donation-word className="inline-block">
                     {word}{' '}
                   </span>
                 ))}
-                <em data-donation-word className="inline-block font-normal text-saffron">Hope.</em>
+                <em data-donation-word className="inline-block font-normal text-saffron">Accessible.</em>
               </h2>
               <p className="mt-5 max-w-[820px] text-[15px] leading-7 text-white/75 sm:text-base sm:leading-8">
-                Your support can help provide healthcare assistance, educational opportunities and essential community support to people who need it. Whether you contribute financially, volunteer your time or help spread awareness, every effort matters.
+                Your contribution can help us reach more people through free medical camps, generic medicine distribution and patient assistance. Every contribution matters. Every act of kindness creates hope.
               </p>
             </div>
 

@@ -1,4 +1,5 @@
 import { ArrowUpRight, Heart, ShieldCheck } from 'lucide-react'
+import { useLocation } from 'react-router-dom'
 import { foundationAssets } from './assets'
 import { BrandLogo } from './brand-logo'
 
@@ -17,7 +18,6 @@ const socialLinks = [
   { label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=100069531152861', icon: 'facebook' },
   { label: 'Instagram', href: 'https://www.instagram.com/kalima_fct', icon: 'instagram' },
   { label: 'Telegram', href: 'https://t.me/kalimafct', icon: 'telegram' },
-  { label: 'YouTube', href: 'https://www.youtube.com/@kalima-fct', icon: 'youtube' },
 ]
 
 function SocialIcon({ type }) {
@@ -46,18 +46,13 @@ function SocialIcon({ type }) {
     </svg>
   )
 
-  if (type === 'youtube') {
-    return (
-      <svg viewBox="0 0 24 24" aria-hidden="true" className="size-4 fill-current">
-        <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.55 3.6 12 3.6 12 3.6s-7.55 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.05 0 12 0 12s0 3.95.5 5.8a3 3 0 0 0 2.1 2.1c1.85.5 9.4.5 9.4.5s7.55 0 9.4-.5a3 3 0 0 0 2.1-2.1C24 15.95 24 12 24 12s0-3.95-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z" />
-      </svg>
-    )
-  }
-
   return null
 }
 
 export function SiteFooter() {
+  const { pathname } = useLocation()
+  const sectionHref = (href) => (pathname === '/' ? href : `/${href}`)
+
   return (
     <footer className="relative isolate overflow-hidden bg-forest-deep text-white">
       <div className="relative border-b border-white/10">
@@ -76,14 +71,14 @@ export function SiteFooter() {
 
         <div className="relative mx-auto flex max-w-7xl flex-col gap-7 px-5 py-14 sm:px-8 sm:py-16 lg:flex-row lg:items-center lg:justify-between">
           <div data-reveal="left">
-            <p className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-saffron">A little kindness goes a long way</p>
+            <p className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-saffron">Patients first. Humanity always.</p>
             <h2 className="font-editorial mt-3 max-w-[760px] text-[clamp(2.2rem,4.5vw,3.6rem)] leading-[1.04] tracking-[-0.04em] text-white">
-              Your kindness can become <em className="font-normal text-saffron">someone&apos;s tomorrow.</em>
+              Let&apos;s make healthcare accessible <em className="font-normal text-saffron">together.</em>
             </h2>
           </div>
           <div className="flex flex-wrap gap-3" data-reveal="right">
             <a
-              href="#donate"
+              href={sectionHref('#donate')}
               data-magnetic
               data-magnetic-strength="0.14"
               className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-saffron px-7 text-[13px] font-bold text-forest-deep shadow-[0_14px_35px_rgba(239,161,43,0.24)] transition-colors hover:bg-[#f6b342]"
@@ -95,7 +90,7 @@ export function SiteFooter() {
               />
             </a>
             <a
-              href="#volunteer"
+              href={sectionHref('#volunteer')}
               className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/30 bg-white/5 px-6 text-[13px] font-semibold text-white backdrop-blur-sm transition-colors hover:border-saffron/60 hover:bg-white/10"
             >
               Volunteer
@@ -118,13 +113,16 @@ export function SiteFooter() {
 
         <div className="relative mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-8 sm:py-16 lg:grid-cols-[1.25fr_0.7fr_0.62fr_1fr] lg:gap-12">
           <div data-reveal="left">
-            <a href="#home" aria-label="Kalima Foundation & Charitable Trust home" className="group inline-flex items-center">
+            <a href={pathname === '/' ? '#home' : '/'} aria-label="Kalima Foundation & Charitable Trust home" className="group inline-flex items-center">
               {/* Logo size: change width here, or LOGO_WIDTH in brand-logo.jsx */}
               <BrandLogo width={92} radius={16} alt="Kalima Foundation & Charitable Trust emblem" />
             </a>
+            <p className="mt-4 text-[10px] font-extrabold uppercase tracking-[0.16em] text-saffron">
+              Kalima Foundation &amp; Charitable Trust (R.)
+            </p>
             <p className="font-editorial mt-6 text-xl leading-snug text-white/90">Building Hope Through Healthcare.</p>
             <p className="mt-3 max-w-[360px] text-xs leading-6 text-white/70">
-              Working towards a healthier, educated and empowered society through compassion, service and community development.
+              Our vision is to develop a Global Medical City integrating healthcare, medical education, multidisciplinary research and R&amp;D, while continuing our commitment to free medical camps, free generic medicine distribution and patient welfare.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               <span className="premium-tag">
@@ -144,7 +142,7 @@ export function SiteFooter() {
               {footerLinks.slice(0, 4).map((link) => (
                 <a
                   key={link.href}
-                  href={link.href}
+                  href={link.href === '#about' ? '/about' : sectionHref(link.href)}
                   className="link-underline text-xs text-white/70 transition-colors hover:text-white"
                 >
                   {link.label}
@@ -159,7 +157,7 @@ export function SiteFooter() {
               {footerLinks.slice(4).map((link) => (
                 <a
                   key={link.href}
-                  href={link.href}
+                  href={link.href === '#about' ? '/about' : sectionHref(link.href)}
                   className="link-underline text-xs text-white/70 transition-colors hover:text-white"
                 >
                   {link.label}
@@ -171,7 +169,7 @@ export function SiteFooter() {
           <div data-reveal="right">
             <p className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-saffron">Our motto</p>
             <p className="font-editorial mt-5 text-xl leading-snug text-white/90">
-              “From the People, By the People, To the People.”
+              “Patients First. Humanity Always.”
             </p>
             <nav aria-label="Footer social media" className="mt-6 flex items-center gap-2.5">
               {socialLinks.map((link) => (
@@ -188,19 +186,27 @@ export function SiteFooter() {
               ))}
             </nav>
             <p className="mt-5 text-[10px] leading-5 text-white/65">
-              All donations and activities are subject to applicable laws, regulations and the Trust&apos;s charitable objectives.
+              All proposed development activities are subject to feasibility, applicable approvals, regulatory compliance, partnerships and resource availability.
             </p>
           </div>
         </div>
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-5 text-[10px] text-white/65 sm:flex-row sm:items-center sm:justify-between sm:px-8">
-          <span>© 2026 Kalima Foundation &amp; Charitable Trust (R.). All Rights Reserved.</span>
-          <span className="inline-flex items-center gap-1.5">
-            Built with compassion
-            <Heart aria-hidden="true" className="size-3 fill-saffron/80 text-saffron" />
-          </span>
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-5 text-[10px] text-white/65 sm:px-8">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <span>© 2026 Kalima Foundation &amp; Charitable Trust (R.). All Rights Reserved.</span>
+            <span className="inline-flex items-center gap-1.5">
+              Built with compassion
+              <Heart aria-hidden="true" className="size-3 fill-saffron/80 text-saffron" />
+            </span>
+          </div>
+          <nav aria-label="Legal and contact" className="flex flex-wrap gap-x-4 gap-y-2 border-t border-white/10 pt-3">
+            <span>Privacy Policy</span>
+            <span>Terms &amp; Conditions</span>
+            <span>Donation Policy</span>
+            <a href="#connect" className="transition-colors hover:text-white">Contact Us</a>
+          </nav>
         </div>
       </div>
     </footer>

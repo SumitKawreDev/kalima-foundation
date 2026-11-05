@@ -52,14 +52,14 @@ export function SpotlightCard({ as: Tag = 'article', className = '', children, .
 }
 
 const values = [
-  'Compassion',
-  'Dignity',
-  'Healthcare',
-  'Education',
-  'Community',
-  'Hope',
-  'Service',
-  'Unity',
+  'Patients First',
+  'Healthcare Access',
+  'Free Medical Camps',
+  'Medical Education',
+  'Research & Development',
+  'Patient Welfare',
+  'Humanity Always',
+  'Community Care',
 ]
 
 export function ValuesMarquee() {

@@ -4,12 +4,6 @@ import { gsap } from 'gsap'
 import { foundationAssets } from './assets'
 import { CircularBadge } from './circular-badge'
 
-const heroHighlights = [
-  { value: '2023', label: 'Founded', detail: '18 July 2023' },
-  { value: '06', label: 'Focus areas', detail: 'Healthcare to skills' },
-  { value: 'GMCP', label: 'Flagship project', detail: 'Global Medical City' },
-]
-
 export function HeroSection() {
   const heroRef = useRef(null)
 
@@ -91,7 +85,7 @@ export function HeroSection() {
     <section
       ref={heroRef}
       id="home"
-      className="relative isolate flex h-[100svh] max-h-[980px] min-h-[740px] items-center overflow-hidden bg-forest text-white"
+      className="relative isolate flex min-h-[100svh] items-start overflow-hidden bg-forest text-white lg:h-[100svh] lg:max-h-[980px] lg:min-h-[740px] lg:items-center"
     >
       <div data-hero-media-wrap className="absolute inset-0 scale-105" aria-hidden="true">
         <img
@@ -113,72 +107,77 @@ export function HeroSection() {
       />
       <div className="hero-glow absolute -right-32 top-1/4 size-[28rem] rounded-full bg-saffron/10 blur-3xl" aria-hidden="true" />
 
-      <div className="hero-badge absolute right-5 top-1/2 z-10 hidden lg:right-8 lg:block">
+      <div className="hero-badge absolute right-4 top-[5.5rem] z-10 lg:right-8">
         <div data-hero-badge>
           <CircularBadge className="text-white/75" />
         </div>
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-20 pt-24 sm:px-8 lg:pb-28 lg:pt-28">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-16 pt-44 sm:px-8 sm:pb-20 sm:pt-48 lg:pb-28 lg:pt-50">
         <div className="hero-copy max-w-[920px]">
           <p data-hero-copy className="font-editorial text-base text-saffron sm:text-lg lg:text-xl">
             परोपकारार्थ इदं शरीरम्
           </p>
-          <span data-hero-copy className="mt-4 block h-px w-16 bg-gradient-to-r from-saffron via-saffron/60 to-transparent" aria-hidden="true" />
+          <p data-hero-copy className="mt-1 text-[9px] font-extrabold uppercase tracking-[0.2em] text-white/65 sm:text-[10px]">
+            Building Hope Through Healthcare
+          </p>
+          <span data-hero-copy className="mt-2 block h-px w-16 bg-gradient-to-r from-saffron via-saffron/60 to-transparent" aria-hidden="true" />
           <h1 className="font-editorial mt-6 max-w-[920px] text-[clamp(2.35rem,5.6vw,5.35rem)] leading-[1.02] tracking-[-0.045em] text-[#fffaf0] sm:mt-7">
             <span className="block overflow-hidden pb-[0.14em] -mb-[0.14em]">
               <span data-hero-line className="block will-change-transform">
-                Together, We Can Build
+                We Aim To Build
               </span>
             </span>
             <span className="block overflow-hidden pb-[0.14em] -mb-[0.14em]">
               <span data-hero-line className="block will-change-transform">
-                a Healthier and More
+                a Global Medical City
               </span>
             </span>
-            <span className="block overflow-hidden pb-[0.22em] -mb-[0.22em]">
-              <em data-hero-line className="block font-normal text-saffron will-change-transform">
-                Hopeful Tomorrow.
-              </em>
-            </span>
           </h1>
-          <p data-hero-copy className="mt-7 max-w-[680px] text-[15px] leading-7 text-white/80 sm:text-base sm:leading-7">
-            Kalima Foundation &amp; Charitable Trust is committed to uplifting humanity through healthcare, education, social welfare and community development.
+          <p data-hero-copy className="mt-1 max-w-[680px] font-editorial text-base text-saffron/90 sm:text-lg">
+            A Global Hub for Healthcare, Medical Education, Research &amp; Development.
           </p>
-          <div data-hero-copy className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+          <p data-hero-copy className="mt-3 max-w-[680px] text-sm leading-6 text-white/80 sm:text-base sm:leading-7">
+            At Kalima Foundation &amp; Charitable Trust, we believe quality healthcare is a basic human necessity, not a privilege. Through free medical camps, free generic medicine distribution and patient assistance, we work towards a healthier society.
+          </p>
+
+          <p data-hero-copy className="mt-3 max-w-[680px] text-sm leading-6 text-white/80 sm:text-base sm:leading-7">
+            We envision an integrated Global Medical City for hospitals, medical education, specialized care, multidisciplinary research and R&amp;D.
+          </p>
+
+          <p data-hero-copy className="mt-4 font-editorial text-base text-saffron sm:text-lg lg:text-xl">
+            Our First Priority – Patients First. Humanity Always.
+          </p>
+          <span data-hero-copy className="mt-2 block h-px w-16 bg-gradient-to-r from-saffron via-saffron/60 to-transparent" aria-hidden="true" />
+          <div data-hero-copy className="mt-6 flex w-full max-w-[520px] flex-col gap-3 sm:w-auto sm:max-w-none sm:flex-row sm:flex-wrap sm:items-center">
+            <a
+              href="#mission"
+              data-magnetic
+              data-magnetic-strength="0.14"
+              className="group relative inline-flex min-h-12 w-full items-center justify-center gap-2 overflow-hidden rounded-full bg-saffron px-7 text-[13px] font-bold text-forest-deep shadow-[0_12px_35px_rgba(239,161,43,0.22)] transition-all hover:-translate-y-0.5 hover:bg-[#f6b342] sm:w-auto"
+            >
+              <span className="relative z-10 inline-flex items-center gap-2">
+                Support Our Mission
+                <ArrowUpRight aria-hidden="true" className="size-4" />
+              </span>
+            </a>
             <a
               href="#donate"
               data-magnetic
               data-magnetic-strength="0.14"
-              className="group relative inline-flex min-h-12 items-center justify-center gap-2 overflow-hidden rounded-full bg-saffron px-7 text-[13px] font-bold text-forest-deep shadow-[0_12px_35px_rgba(239,161,43,0.22)] transition-all hover:-translate-y-0.5 hover:bg-[#f6b342]"
+              className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full border border-white/35 bg-white/10 px-6 text-[13px] font-semibold text-white backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-saffron/60 hover:bg-white/20 sm:w-auto"
             >
-              <span className="relative z-10 inline-flex items-center gap-2">
-                Donate Now
-                <ArrowUpRight
-                  aria-hidden="true"
-                  className="size-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                />
-              </span>
-              <span
-                aria-hidden="true"
-                className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/35 to-transparent transition-transform duration-700 group-hover:translate-x-full"
-              />
+              Donate Now <ArrowUpRight aria-hidden="true" className="size-4" />
             </a>
             <a
-              href="#mission"
-              className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/35 bg-white/10 px-6 text-[13px] font-semibold text-white backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-saffron/60 hover:bg-white/20"
+              href="#medical-city"
+              className="group inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full border border-white/25 bg-white/5 px-6 text-[13px] font-semibold text-white backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-white/45 hover:bg-white/15 sm:w-auto"
             >
-              Explore Our Mission
+              Explore Global Medical City
               <ArrowUpRight
                 aria-hidden="true"
-                className="size-3.5 opacity-0 transition-all duration-300 group-hover:translate-x-0.5 group-hover:opacity-100"
+                className="size-3.5 transition-transform duration-300 group-hover:translate-x-0.5"
               />
-            </a>
-            <a
-              href="#volunteer"
-              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/25 bg-white/5 px-6 text-[13px] font-semibold text-white backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-white/45 hover:bg-white/15"
-            >
-              Become a Volunteer
             </a>
           </div>
           <p
@@ -197,33 +196,10 @@ export function HeroSection() {
         data-hero-copy
         className="group absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-[9px] font-bold uppercase tracking-[0.24em] text-white/50 transition-colors hover:text-saffron lg:bottom-28"
       >
-        
+        <span className="sr-only">Scroll to About</span>
+        <ChevronDown aria-hidden="true" className="size-4" />
       </a>
 
-      <div
-        data-hero-stats
-        className="absolute inset-x-0 bottom-0 z-20 hidden border-t border-white/15 bg-[#04231d]/55 backdrop-blur-md lg:block"
-      >
-        <div className="mx-auto grid max-w-7xl grid-cols-3 divide-x divide-white/15 px-5 sm:px-8">
-          {heroHighlights.map((item) => (
-            <div
-              key={item.label}
-              data-hero-stat
-              className="group flex min-w-0 items-center gap-4 px-5 py-4 transition-colors hover:bg-white/[0.04] first:pl-0 last:pr-0 xl:gap-5"
-            >
-              <span className="font-editorial text-2xl text-saffron transition-transform duration-300 group-hover:-translate-y-0.5">
-                {item.value}
-              </span>
-              <span className="flex min-w-0 flex-col">
-                <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/80">{item.label}</span>
-                <span className="mt-0.5 truncate text-[11px] text-white/45 transition-colors group-hover:text-white/70">
-                  {item.detail}
-                </span>
-              </span>
-            </div>
-          ))}
-        </div>
-      </div>
     </section>
   )
 }

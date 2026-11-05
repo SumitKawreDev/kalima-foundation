@@ -1,9 +1,10 @@
 import { ArrowUpRight, Menu, X } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import { BrandLogo } from './brand-logo'
 
 const navigation = [
-  { label: 'About', href: '#about', id: 'about' },
+  { label: 'About Us', href: '/about', id: 'about' },
   { label: 'Mission', href: '#mission', id: 'mission' },
   { label: 'Initiatives', href: '#work', id: 'work' },
   { label: 'Medical City', href: '#medical-city', id: 'medical-city' },
@@ -12,6 +13,7 @@ const navigation = [
 ]
 
 export function SiteHeader() {
+  const { pathname } = useLocation()
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState('')
@@ -92,6 +94,7 @@ export function SiteHeader() {
   }, [])
 
   const closeMenu = () => setMenuOpen(false)
+  const homeHref = (href) => (pathname === '/' ? href : `/${href}`)
   const solid = scrolled || menuOpen
   const donateActive = activeSection === 'donate' || activeSection === 'donation-utilisation'
 
@@ -109,7 +112,7 @@ export function SiteHeader() {
         }`}
       >
         <a
-          href="#home"
+          href={pathname === '/' ? '#home' : '/'}
           aria-label="Kalima Foundation & Charitable Trust home"
           className="group flex shrink-0 items-center"
           onClick={closeMenu}
@@ -120,12 +123,14 @@ export function SiteHeader() {
 
         <nav aria-label="Main navigation" className="hidden items-center gap-1 lg:flex xl:gap-2">
           {navigation.map((item) => {
-            const isActive = activeSection === item.id
+            const isActive = item.id === 'about'
+              ? pathname === '/about'
+              : activeSection === item.id
 
             return (
               <a
                 key={item.href}
-                href={item.href}
+                href={item.href.startsWith('#') ? homeHref(item.href) : item.href}
                 aria-current={isActive ? 'true' : undefined}
                 className={`group relative rounded-full px-3 py-2 text-[13px] font-medium transition-colors duration-300 ${
                   isActive ? 'text-saffron' : 'text-white/85 hover:text-white'
@@ -142,7 +147,7 @@ export function SiteHeader() {
             )
           })}
           <a
-            href="#donate"
+            href={homeHref('#donate')}
             aria-current={donateActive ? 'true' : undefined}
             data-magnetic
             data-magnetic-strength="0.16"
@@ -186,12 +191,14 @@ export function SiteHeader() {
       >
         <nav aria-label="Mobile navigation" className="flex flex-col gap-1 px-5 pb-5 pt-3">
           {navigation.map((item, index) => {
-            const isActive = activeSection === item.id
+            const isActive = item.id === 'about'
+              ? pathname === '/about'
+              : activeSection === item.id
 
             return (
               <a
                 key={item.href}
-                href={item.href}
+                href={item.href.startsWith('#') ? homeHref(item.href) : item.href}
                 aria-current={isActive ? 'true' : undefined}
                 onClick={closeMenu}
                 style={{ transitionDelay: menuOpen ? `${80 + index * 40}ms` : '0ms' }}
@@ -204,7 +211,7 @@ export function SiteHeader() {
             )
           })}
           <a
-            href="#donate"
+            href={homeHref('#donate')}
             onClick={closeMenu}
             style={{ transitionDelay: menuOpen ? `${80 + navigation.length * 40}ms` : '0ms' }}
             className={`mt-2 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-saffron px-5 text-sm font-bold text-forest-deep transition-all duration-300 ${

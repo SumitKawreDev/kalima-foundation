@@ -75,7 +75,7 @@ body {
 }
 
 .hero-badge {
-  width: clamp(130px, 14vw, 190px);
+  width: clamp(76px, 12vw, 118px);
   pointer-events: none;
 }
 
@@ -119,17 +119,15 @@ body {
   }
 
   .hero-badge {
-    transform: translateY(-50%);
+    top: 6.5rem;
+    width: clamp(130px, 12vw, 170px);
   }
 }
 
 @media (max-width: 1023px) {
   .hero-badge {
-    right: 1.5rem;
-    top: auto;
-    bottom: 1.5rem;
-    width: 112px;
-    transform: none;
+    top: 5.5rem;
+    right: 1rem;
   }
 }
 
@@ -147,11 +145,6 @@ body {
     
   letter-spacing: 2.2px;
 }
-.circular-badge {
-  margin-top: -280px;
-  margin-left: -20px;
-}
-
 .circular-badge__center {
   position: absolute;
   inset: 0;
