@@ -211,11 +211,11 @@ export function DonationSection() {
                 className="donation-title font-editorial mt-5 max-w-[760px] text-[clamp(2.35rem,5vw,4rem)] leading-[1.06] tracking-[-0.04em] text-white"
               >
                 {['Together,', 'We', 'Can', 'Make', 'Healthcare'].map((word) => (
-                  <span key={word} data-donation-word className="inline-block">
-                    {word}{' '}
+                  <span key={word} data-donation-word className="mr-[0.2em] inline-block">
+                    {word}
                   </span>
                 ))}
-                <em data-donation-word className="inline-block font-normal text-saffron">Accessible.</em>
+                <em data-donation-word className="ml-[0.05em] inline-block font-normal text-saffron">Accessible.</em>
               </h2>
               <p className="mt-5 max-w-[820px] text-[15px] leading-7 text-white/75 sm:text-base sm:leading-8">
                 Your contribution can help us reach more people through free medical camps, generic medicine distribution and patient assistance. Every contribution matters. Every act of kindness creates hope.

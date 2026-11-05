@@ -719,9 +719,9 @@ const getLeadershipImage = (fileName) => {
 const BOARDS_DATA = [
   {
     id: 'trustees',
-    title: 'Board of Trustees',
+    title: 'Board of Trustees – 5 Members',
     description:
-      "The core leadership guiding the foundation's mission and long-term vision.",
+      "The core leadership responsible for guiding the foundation's mission, governance and long-term vision.",
     icon: Users,
     badgeStyle: 'pill',
     members: [
@@ -734,9 +734,9 @@ const BOARDS_DATA = [
   },
   {
     id: 'advisors',
-    title: 'Board of Advisors',
+    title: 'Board of Advisors – 4 Members',
     description:
-      'Esteemed experts providing strategic guidance and counsel.',
+      'Esteemed professionals and experts providing strategic guidance, valuable insights and institutional counsel.',
     icon: GraduationCap,
     badgeStyle: 'text',
     members: [
@@ -748,9 +748,9 @@ const BOARDS_DATA = [
   },
   {
     id: 'directors',
-    title: 'Board of Directors',
+    title: 'Board of Directors – 12 Members',
     description:
-      "A diverse team of professionals driving the foundation's initiatives and governance.",
+      "A diverse team of dedicated professionals driving the foundation's initiatives, organizational development and execution of its vision.",
     icon: Landmark,
     badgeStyle: 'text',
     members: [
@@ -1292,9 +1292,16 @@ export default function LeadershipSection() {
           </h2>
 
           <p className="mt-3 max-w-[650px] text-sm leading-6 text-ink/75">
-            Meet the dedicated leaders, advisors and professionals whose
-            experience and commitment guide our foundation towards a
-            meaningful and lasting impact.
+            Kalima Foundation &amp; Charitable Trust is guided by a dedicated
+            team of trustees, advisors and directors who bring together
+            professional expertise, leadership and a shared commitment to
+            humanity.
+          </p>
+          <p className="mt-3 max-w-[800px] text-sm leading-6 text-ink/75">
+            Our leadership works collectively to advance the foundation&apos;s
+            mission, strengthen healthcare initiatives and guide the vision of
+            Global Medical City through strategic direction, governance and
+            sustainable development.
           </p>
         </div>
 
@@ -1319,6 +1326,11 @@ export default function LeadershipSection() {
             </motion.div>
           ))}
         </div>
+
+        <p className="mt-10 border-t border-forest/10 pt-6 text-center font-medium leading-7 text-forest sm:mt-12 sm:text-lg">
+          Together, our leadership is committed to putting patients first and
+          building a healthier, more empowered future for society.
+        </p>
       </div>
     </section>
   )
