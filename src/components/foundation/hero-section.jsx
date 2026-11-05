@@ -113,40 +113,38 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-16 pt-44 sm:px-8 sm:pb-20 sm:pt-48 lg:pb-28 lg:pt-50">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-16 pt-36 sm:px-8 sm:pb-20 sm:pt-40 lg:pb-28 lg:pt-48">
         <div className="hero-copy max-w-[920px]">
           <p data-hero-copy className="font-editorial text-base text-saffron sm:text-lg lg:text-xl">
             परोपकारार्थ इदं शरीरम्
           </p>
-          <p data-hero-copy className="mt-1 text-[9px] font-extrabold uppercase tracking-[0.2em] text-white/65 sm:text-[10px]">
-            Building Hope Through Healthcare
-          </p>
+         
           <span data-hero-copy className="mt-2 block h-px w-16 bg-gradient-to-r from-saffron via-saffron/60 to-transparent" aria-hidden="true" />
-          <h1 className="font-editorial mt-6 max-w-[920px] text-[clamp(2.35rem,5.6vw,5.35rem)] leading-[1.02] tracking-[-0.045em] text-[#fffaf0] sm:mt-7">
+          <h1 className="font-editorial mt-5 max-w-[920px] text-balance text-[clamp(2.15rem,8vw,5.35rem)] leading-[1.04] tracking-[-0.045em] text-[#fffaf0] sm:mt-7 sm:text-[clamp(2.5rem,5.6vw,5.35rem)]">
             <span className="block overflow-hidden pb-[0.14em] -mb-[0.14em]">
               <span data-hero-line className="block will-change-transform">
-                We Aim To Build
+                A Global Medical City for
               </span>
             </span>
             <span className="block overflow-hidden pb-[0.14em] -mb-[0.14em]">
               <span data-hero-line className="block will-change-transform">
-                a Global Medical City
+                Advanced Care and Humanity
               </span>
             </span>
           </h1>
-          <p data-hero-copy className="mt-1 max-w-[680px] font-editorial text-base text-saffron/90 sm:text-lg">
-            A Global Hub for Healthcare, Medical Education, Research &amp; Development.
+          <p data-hero-copy className="mt-2 max-w-[680px] text-balance font-editorial text-base leading-6 text-saffron/90 sm:text-lg sm:leading-7">
+            Bringing healthcare, medical education, specialized care and research together.
           </p>
-          <p data-hero-copy className="mt-3 max-w-[680px] text-sm leading-6 text-white/80 sm:text-base sm:leading-7">
-            At Kalima Foundation &amp; Charitable Trust, we believe quality healthcare is a basic human necessity, not a privilege. Through free medical camps, free generic medicine distribution and patient assistance, we work towards a healthier society.
+          <p data-hero-copy className="mt-4 max-w-[680px] text-sm leading-6 text-white/80 sm:text-base sm:leading-7">
+            Kalima Foundation (R.) &amp; Charitable Trust works to make quality healthcare more accessible through free medical camps, free medicine distribution and patient assistance.
           </p>
 
           <p data-hero-copy className="mt-3 max-w-[680px] text-sm leading-6 text-white/80 sm:text-base sm:leading-7">
-            We envision an integrated Global Medical City for hospitals, medical education, specialized care, multidisciplinary research and R&amp;D.
+            Our vision is an integrated Global Medical City where hospitals, specialized care, medical education, multidisciplinary research and development work together.
           </p>
 
           <p data-hero-copy className="mt-4 font-editorial text-base text-saffron sm:text-lg lg:text-xl">
-            Our First Priority – Patients First. Humanity Always.
+            Our priority: patients first, humanity always.
           </p>
           <span data-hero-copy className="mt-2 block h-px w-16 bg-gradient-to-r from-saffron via-saffron/60 to-transparent" aria-hidden="true" />
           <div data-hero-copy className="mt-6 flex w-full max-w-[520px] flex-col gap-3 sm:w-auto sm:max-w-none sm:flex-row sm:flex-wrap sm:items-center">

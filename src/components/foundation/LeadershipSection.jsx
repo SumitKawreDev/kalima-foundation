@@ -1292,7 +1292,7 @@ export default function LeadershipSection() {
           </h2>
 
           <p className="mt-3 max-w-[650px] text-sm leading-6 text-ink/75">
-            Kalima Foundation &amp; Charitable Trust is guided by a dedicated
+            Kalima Foundation (R.) &amp; Charitable Trust is guided by a dedicated
             team of trustees, advisors and directors who bring together
             professional expertise, leadership and a shared commitment to
             humanity.

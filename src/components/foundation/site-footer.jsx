@@ -113,16 +113,16 @@ export function SiteFooter() {
 
         <div className="relative mx-auto grid max-w-7xl gap-10 px-5 py-12 sm:px-8 sm:py-16 lg:grid-cols-[1.25fr_0.7fr_0.62fr_1fr] lg:gap-12">
           <div data-reveal="left">
-            <a href={pathname === '/' ? '#home' : '/'} aria-label="Kalima Foundation & Charitable Trust home" className="group inline-flex items-center">
+            <a href={pathname === '/' ? '#home' : '/'} aria-label="Kalima Foundation (R.) & Charitable Trust home" className="group inline-flex items-center">
               {/* Logo size: change width here, or LOGO_WIDTH in brand-logo.jsx */}
-              <BrandLogo width={92} radius={16} alt="Kalima Foundation & Charitable Trust emblem" />
+              <BrandLogo width={92} radius={16} alt="Kalima Foundation (R.) & Charitable Trust emblem" />
             </a>
             <p className="mt-4 text-[10px] font-extrabold uppercase tracking-[0.16em] text-saffron">
-              Kalima Foundation &amp; Charitable Trust (R.)
+              Kalima Foundation (R.) &amp; Charitable Trust
             </p>
             <p className="font-editorial mt-6 text-xl leading-snug text-white/90">Building Hope Through Healthcare.</p>
             <p className="mt-3 max-w-[360px] text-xs leading-6 text-white/70">
-              Our vision is to develop a Global Medical City integrating healthcare, medical education, multidisciplinary research and R&amp;D, while continuing our commitment to free medical camps, free generic medicine distribution and patient welfare.
+              Our vision is to develop a Global Medical City integrating healthcare, medical education, multidisciplinary research and R&amp;D, while continuing our commitment to free medical camps, free medicine distribution and patient welfare.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               <span className="premium-tag">
@@ -195,7 +195,7 @@ export function SiteFooter() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-5 text-[10px] text-white/65 sm:px-8">
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-            <span>© 2026 Kalima Foundation &amp; Charitable Trust (R.). All Rights Reserved.</span>
+            <span>© 2026 Kalima Foundation (R.) &amp; Charitable Trust. All Rights Reserved.</span>
             <span className="inline-flex items-center gap-1.5">
               Built with compassion
               <Heart aria-hidden="true" className="size-3 fill-saffron/80 text-saffron" />

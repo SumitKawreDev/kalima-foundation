@@ -5,7 +5,7 @@ import { SpotlightCard } from './premium-ui'
 const waysToHelp = [
   'Medical camp volunteering.',
   'Healthcare awareness activities.',
-  'Generic medicine distribution initiatives.',
+  'Free medicine distribution initiatives.',
   'Patient assistance.',
   'Education and healthcare training.',
   'Research and academic collaboration.',
@@ -120,7 +120,7 @@ export function VolunteerSection() {
             <p className="eyebrow">Connect with us</p>
             <h2 className="font-editorial mt-3 text-[clamp(2rem,3.5vw,2.8rem)] leading-tight text-forest">Let&apos;s Build a Healthier Future Together.</h2>
             <p className="mt-3 max-w-[650px] text-sm leading-6 text-ink/75">
-              Follow Kalima Foundation &amp; Charitable Trust for updates about our healthcare initiatives, medical camps, free medicine distribution and Global Medical City vision.
+              Follow Kalima Foundation (R.) &amp; Charitable Trust for updates about our healthcare initiatives, medical camps, free medicine distribution and Global Medical City vision.
             </p>
           </div>
           <nav aria-label="Social media" className="flex flex-wrap gap-3" data-reveal="right">

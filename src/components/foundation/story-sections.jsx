@@ -14,7 +14,7 @@ import { SpotlightCard } from './premium-ui'
 
 const approachAreas = [
   'Free Medical Camps',
-  'Free Generic Medicines',
+  'Free  Medicines',
   'Patient Assistance',
   'Healthcare Awareness',
   'Medical Education',
@@ -30,9 +30,9 @@ const focusAreas = [
   },
   {
     icon: Heart,
-    title: 'Free Generic Medicine Distribution',
+    title: 'Free   Medicine Distribution',
     description:
-      'Helping people who cannot easily afford essential generic medicines by distributing them free of cost.',
+      'Helping people who cannot easily afford essential   medicines by distributing them free of cost.',
   },
   {
     icon: HeartHandshake,
@@ -143,9 +143,9 @@ export function AboutSection() {
             </p>
             <p className="mt-5 max-w-[620px] break-words text-sm leading-7 text-ink/75 sm:text-base sm:leading-8">
               Our philosophy is simple:{' '}
-              <strong className="font-bold text-forest">
+              {/* <strong className="font-bold text-forest">
                 From the People, By the People, To the People.
-              </strong>
+              </strong> */}
             </p>
             <p className="mt-5 max-w-[620px] break-words text-sm leading-7 text-ink/75 sm:text-base sm:leading-8">
               Our long-term vision is a Global Medical City integrating patient
@@ -292,7 +292,7 @@ export function VisionMissionSection() {
             </p>
 
             <h2 className="font-editorial mt-5 max-w-[610px] break-words text-[clamp(2.5rem,4.7vw,3.75rem)] leading-[1.08] tracking-[-0.035em] text-white">
-              A Global Medical Hub for Humanity
+             Bridging Global Health and Human Care
             </h2>
 
             <p className="mt-6 max-w-[570px] break-words text-sm leading-7 text-white/70 sm:text-base sm:leading-8">

@@ -113,7 +113,7 @@ export function SiteHeader() {
       >
         <a
           href={pathname === '/' ? '#home' : '/'}
-          aria-label="Kalima Foundation & Charitable Trust home"
+          aria-label="Kalima Foundation (R.) & Charitable Trust home"
           className="group flex shrink-0 items-center"
           onClick={closeMenu}
         >

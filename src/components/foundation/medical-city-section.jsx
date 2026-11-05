@@ -20,8 +20,8 @@ const proposedFacilities = [
   },
   {
     icon: BookOpen,
-    title: 'Global Medical College City',
-    description: 'Medical colleges, healthcare training, professional development and academic collaboration.',
+    title: 'Global Medical City',
+    description: 'Medical city, healthcare training, professional development and academic collaboration.',
   },
   {
     icon: Microscope,
@@ -45,7 +45,7 @@ const proposedFacilities = [
   },
   {
     icon: Stethoscope,
-    title: 'Nursing & Healthcare Education',
+    title: 'Veterinary nursing & Healthcare',
     description: 'Education and professional development for nurses, healthcare professionals and students.',
   },
   {
@@ -77,7 +77,7 @@ export function MedicalCitySection() {
             Building a Global Hub for Healthcare, Medical Education &amp; Research.
           </p>
           <p className="mt-6 max-w-[780px] text-sm leading-7 text-ink/70 sm:text-base sm:leading-8">
-            The Global Medical City (GMC) is the flagship development vision of Kalima Foundation &amp; Charitable Trust. Our aim is to establish an integrated medical ecosystem bringing healthcare and medical development facilities together. More than a hospital campus, GMC is envisioned as a comprehensive medical city where healthcare delivery, education, innovation, research and development work together.
+            The Global Medical City (GMC) is the flagship development vision of Kalima Foundation (R.) &amp; Charitable Trust. Our aim is to establish an integrated medical ecosystem bringing healthcare and medical development facilities together. More than a hospital campus, GMC is envisioned as a comprehensive medical city where healthcare delivery, education, innovation, research and development work together.
           </p>
         </div>
 

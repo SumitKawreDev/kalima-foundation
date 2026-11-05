@@ -119,7 +119,7 @@ export function FloatingDonate() {
   return (
     <a
       href="#donate"
-      aria-label="Donate to Kalima Foundation"
+      aria-label="Donate to Kalima Foundation (R.)"
       data-magnetic
       data-magnetic-strength="0.18"
       className={`floating-donate ${visible ? 'is-visible' : ''}`}

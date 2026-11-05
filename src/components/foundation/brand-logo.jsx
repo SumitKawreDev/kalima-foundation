@@ -20,7 +20,7 @@ export function BrandLogo({
   width = LOGO_WIDTH,
   radius = LOGO_RADIUS,
   className = '',
-  alt = 'Kalima Foundation & Charitable Trust',
+  alt = 'Kalima Foundation (R.) & Charitable Trust',
   loading = 'lazy',
 }) {
   const height = Math.round(width * LOGO_ASPECT)
