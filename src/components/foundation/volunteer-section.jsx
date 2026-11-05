@@ -22,7 +22,7 @@ const socialLinks = [
 export function VolunteerSection() {
   return (
     <>
-      <section id="volunteer" className="section-glow bg-paper py-14 sm:py-20">
+      <section id="volunteer" className="section-glow bg-paper py-10 sm:py-14">
         <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div data-reveal="left">
             <p className="eyebrow">Become a volunteer</p>
@@ -85,7 +85,7 @@ export function VolunteerSection() {
           </div>
         </div>
 
-        <div className="mx-auto mt-10 max-w-7xl px-5 sm:mt-14 sm:px-8">
+        <div className="mx-auto mt-8 max-w-7xl px-5 sm:mt-10 sm:px-8">
           <figure
             data-reveal="scale"
             data-image-reveal
@@ -113,7 +113,7 @@ export function VolunteerSection() {
         </div>
       </section>
 
-      <section id="connect" className="relative isolate overflow-hidden border-t border-forest/10 bg-white py-12 sm:py-14">
+      <section id="connect" className="relative isolate overflow-hidden border-t border-forest/10 bg-white py-10 sm:py-12">
         <div className="absolute -right-20 -top-24 -z-10 size-64 rounded-full bg-saffron/[0.06] blur-3xl" aria-hidden="true" />
         <div className="mx-auto flex max-w-7xl flex-col gap-7 px-5 sm:px-8 md:flex-row md:items-end md:justify-between">
           <div data-reveal="left">

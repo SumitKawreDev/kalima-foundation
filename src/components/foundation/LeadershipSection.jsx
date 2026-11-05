@@ -1272,7 +1272,7 @@ export default function LeadershipSection() {
   return (
     <section
       id="leadership"
-      className="relative w-full overflow-hidden bg-white py-14 lg:py-20"
+      className="relative w-full overflow-hidden bg-white py-10 lg:py-14"
     >
       <style>{`
         .no-scrollbar::-webkit-scrollbar {

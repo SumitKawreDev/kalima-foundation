@@ -114,10 +114,10 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="section-glow bg-paper py-14 sm:py-20 lg:py-24"
+      className="section-glow bg-paper py-10 sm:py-14 lg:py-16"
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="grid items-center gap-12 lg:grid-cols-[1fr_0.95fr] lg:gap-20">
+        <div className="grid items-center gap-8 lg:grid-cols-[1fr_0.95fr] lg:gap-12">
           <div data-reveal="left" className="min-w-0">
             <p className="eyebrow">Who we are</p>
 
@@ -228,7 +228,7 @@ export function AboutSection() {
         </div>
 
         {/* APPROACH */}
-        <div data-reveal="up" className="mt-16 sm:mt-20">
+        <div data-reveal="up" className="mt-12 sm:mt-14">
           <div className="mb-5 flex items-end justify-between gap-4">
             <p className="eyebrow">Our approach</p>
 
@@ -268,7 +268,7 @@ export function VisionMissionSection() {
   return (
     <section
       id="mission"
-      className="section-glow relative isolate overflow-hidden bg-forest py-14 text-white sm:py-20 lg:py-24"
+      className="section-glow relative isolate overflow-hidden bg-forest py-10 text-white sm:py-14 lg:py-16"
     >
       <div
         className="absolute -right-32 -top-48 -z-10 size-[520px] rounded-full bg-white/[0.035] sm:size-[700px]"
@@ -286,7 +286,7 @@ export function VisionMissionSection() {
       />
 
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-24">
+        <div className="grid gap-8 lg:grid-cols-2 lg:gap-14">
           <div data-reveal="left" className="min-w-0">
             <p className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-saffron">
               Our vision
@@ -358,7 +358,7 @@ export function VisionMissionSection() {
 
         <div
           data-reveal="scale"
-          className="relative mt-14 overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.1] p-6 sm:mt-16 sm:p-9 lg:p-10"
+          className="relative mt-10 overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.1] p-6 sm:mt-12 sm:p-8 lg:p-9"
         >
           <div
             className="pointer-events-none absolute -right-16 -top-16 size-48 rounded-full border border-white/10"
@@ -400,7 +400,7 @@ export function FocusSection() {
   return (
     <section
       id="work"
-      className="section-glow bg-paper py-14 sm:py-20 lg:py-24"
+      className="section-glow bg-paper py-10 sm:py-14 lg:py-16"
     >
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div data-reveal="up" className="mx-auto max-w-[780px] text-center">
@@ -518,7 +518,7 @@ export function FocusSection() {
 
 export function MultiResearchCentreSection() {
   return (
-    <section id="research" className="section-glow bg-paper py-14 sm:py-20">
+    <section id="research" className="section-glow bg-paper py-10 sm:py-14">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.88fr_1.12fr] lg:gap-16">
         <div data-reveal="left" className="min-w-0">
           <p className="eyebrow">Multidisciplinary research centre</p>
@@ -611,7 +611,7 @@ const medicalCollegeObjectives = [
 
 export function MedicalCollegeCitySection() {
   return (
-    <section id="medical-education" className="bg-white py-14 sm:py-20">
+    <section id="medical-education" className="bg-white py-10 sm:py-14">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:gap-16">
         <div data-reveal="left" className="min-w-0">
           <p className="eyebrow">Global Medical College City</p>
@@ -659,7 +659,7 @@ const researchDevelopmentObjectives = [
 
 export function ResearchDevelopmentSection() {
   return (
-    <section id="research-development" className="section-glow bg-paper py-14 sm:py-20">
+    <section id="research-development" className="section-glow bg-paper py-10 sm:py-14">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div data-reveal="up" className="mx-auto max-w-[820px] text-center">
           <p className="eyebrow">Research &amp; Development – an important part of GMC</p>
@@ -699,7 +699,7 @@ export function ResearchDevelopmentSection() {
 
 export function WhoWeServeSection() {
   return (
-    <section className="section-glow bg-paper pb-14 sm:pb-20">
+    <section className="section-glow bg-paper pb-10 sm:pb-14">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid items-end gap-8 lg:grid-cols-[1fr_0.68fr] lg:gap-14">
           <div data-reveal="left" className="min-w-0 max-w-[800px]">
@@ -828,7 +828,7 @@ export function MomentsSection() {
     <section
       id="moments"
       data-nav-section="work"
-      className="relative isolate overflow-hidden bg-forest-deep py-14 text-white sm:py-20"
+      className="relative isolate overflow-hidden bg-forest-deep py-10 text-white sm:py-14"
     >
       <div
         className="absolute -left-24 top-0 -z-10 size-[420px] rounded-full bg-mint/[0.07] blur-3xl"

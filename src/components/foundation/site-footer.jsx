@@ -69,7 +69,7 @@ export function SiteFooter() {
         <div className="absolute inset-0 bg-gradient-to-r from-forest-deep via-forest-deep/92 to-forest-deep/55" aria-hidden="true" />
         <div className="absolute inset-0 bg-[radial-gradient(40rem_20rem_at_85%_20%,rgba(239,161,43,0.16),transparent_70%)]" aria-hidden="true" />
 
-        <div className="relative mx-auto flex max-w-7xl flex-col gap-7 px-5 py-14 sm:px-8 sm:py-16 lg:flex-row lg:items-center lg:justify-between">
+        <div className="relative mx-auto flex max-w-7xl flex-col gap-7 px-5 py-10 sm:px-8 sm:py-12 lg:flex-row lg:items-center lg:justify-between">
           <div data-reveal="left">
             <p className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-saffron">Patients first. Humanity always.</p>
             <h2 className="font-editorial mt-3 max-w-[760px] text-[clamp(2.2rem,4.5vw,3.6rem)] leading-[1.04] tracking-[-0.04em] text-white">

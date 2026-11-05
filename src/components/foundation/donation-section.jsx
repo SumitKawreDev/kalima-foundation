@@ -139,7 +139,7 @@ export function DonationSection() {
 
   return (
     <>
-      <section id="donation-utilisation" className="section-glow bg-paper py-14 sm:py-20">
+      <section id="donation-utilisation" className="section-glow bg-paper py-10 sm:py-14">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <div data-reveal="up" className="max-w-[800px]">
             <p className="eyebrow">Donation utilisation</p>
@@ -193,7 +193,7 @@ export function DonationSection() {
         </div>
       </section>
 
-      <section id="donate" className="bg-paper px-5 pb-14 sm:px-8 sm:pb-20">
+      <section id="donate" className="bg-paper px-5 pb-10 sm:px-8 sm:pb-14">
         <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-forest px-5 py-8 text-white sm:rounded-[2.5rem] sm:px-8 sm:py-12 lg:px-16 lg:py-16">
           <div className="absolute -bottom-32 -left-24 size-80 rounded-full bg-white/[0.045]" aria-hidden="true" />
           <div className="absolute -right-24 -top-32 size-96 rounded-full border border-white/[0.08]" aria-hidden="true" />
