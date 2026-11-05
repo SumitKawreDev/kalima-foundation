@@ -1272,7 +1272,7 @@ export default function LeadershipSection() {
   return (
     <section
       id="leadership"
-      className="relative w-full overflow-hidden bg-white py-20 lg:py-28"
+      className="relative w-full overflow-hidden bg-white py-14 lg:py-20"
     >
       <style>{`
         .no-scrollbar::-webkit-scrollbar {
@@ -1283,7 +1283,7 @@ export default function LeadershipSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}
-        <div data-reveal="left" className="mb-16 lg:mb-20">
+        <div data-reveal="left" className="mb-10 lg:mb-14">
           <p className="eyebrow">OUR LEADERSHIP</p>
 
           <h2 className="font-editorial mt-5 max-w-[690px] text-[clamp(2.7rem,5vw,4rem)] leading-[1.06] tracking-[-0.045em] text-forest">

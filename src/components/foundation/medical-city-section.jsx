@@ -57,7 +57,7 @@ const proposedFacilities = [
 
 export function MedicalCitySection() {
   return (
-    <section id="medical-city" className="section-glow bg-paper py-20 sm:py-28 lg:py-32">
+    <section id="medical-city" className="section-glow bg-paper py-12 sm:py-16 lg:py-20">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div data-reveal="up" className="max-w-[850px]">
           <div className="flex flex-wrap items-center gap-3">
@@ -84,7 +84,7 @@ export function MedicalCitySection() {
         <figure
           data-reveal="scale"
           data-image-reveal
-          className="image-frame group relative mt-10 overflow-hidden rounded-[1.75rem] bg-forest sm:mt-14 sm:rounded-[2.25rem]"
+          className="image-frame group relative mt-8 overflow-hidden rounded-[1.75rem] bg-forest sm:mt-10 sm:rounded-[2.25rem]"
         >
           <img
             src={foundationAssets.medicalCity}
@@ -99,7 +99,7 @@ export function MedicalCitySection() {
           </figcaption>
         </figure>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 sm:gap-5 xl:grid-cols-4">
+        <div className="mt-8 grid gap-4 sm:mt-10 sm:grid-cols-2 sm:gap-5 xl:grid-cols-4">
           {proposedFacilities.map(({ icon: Icon, title, description }, index) => (
             <SpotlightCard
               key={title}
