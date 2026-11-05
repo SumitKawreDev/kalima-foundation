@@ -44,7 +44,7 @@ const donationCategories = [
     icon: HeartPulse,
     items: [
       'Free medical camps and health awareness.',
-      'Free medicine distribution.',
+      'Free   medicine distribution.',
       'Medical assistance for deserving patients.',
     ],
   },
@@ -218,7 +218,7 @@ export function DonationSection() {
                 <em data-donation-word className="ml-[0.05em] inline-block font-normal text-saffron">Accessible.</em>
               </h2>
               <p className="mt-5 max-w-[820px] text-[15px] leading-7 text-white/75 sm:text-base sm:leading-8">
-                Your contribution can help us reach more people through free medical camps, free medicine distribution and patient assistance. Every contribution matters. Every act of kindness creates hope.
+                Your contribution can help us reach more people through free medical camps, generic medicine distribution and patient assistance. Every contribution matters. Every act of kindness creates hope.
               </p>
             </div>
 
