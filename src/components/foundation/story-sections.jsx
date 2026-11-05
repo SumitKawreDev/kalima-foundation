@@ -193,10 +193,10 @@ export function AboutSection() {
               aria-hidden="true"
             />
 
-            <div
+            {/* <div
               className="pointer-events-none absolute -right-20 -top-24 size-64 rounded-full border border-white/15 transition-transform duration-700 group-hover:scale-110"
               aria-hidden="true"
-            />
+            /> */}
 
             {/* TOP BRAND */}
             <div className="absolute inset-x-0 top-0 z-20 flex min-w-0 items-center gap-3 p-5 sm:p-7">
@@ -207,16 +207,16 @@ export function AboutSection() {
             {/* BOTTOM TEXT */}
             <figcaption className="absolute inset-x-0 bottom-0 z-20 p-5 sm:p-7">
               <div className="w-full min-w-0 max-w-[520px]">
-                <p className="text-[9px] font-extrabold uppercase tracking-[0.18em] text-saffron sm:text-[10px]">
+                {/* <p className="text-[9px] font-extrabold uppercase tracking-[0.18em] text-saffron sm:text-[10px]">
                   Our promise
-                </p>
+                </p> */}
 
-                <blockquote className="font-editorial mt-2 w-full max-w-full break-words text-[clamp(1.35rem,5vw,1.9rem)] italic leading-[1.12] text-white">
+                {/* <blockquote className="font-editorial mt-2 w-full max-w-full break-words text-[clamp(1.35rem,5vw,1.9rem)] italic leading-[1.12] text-white">
                   &ldquo;From the People, By the People,
                   <br className="hidden sm:block" />
                   <span className="sm:hidden"> </span>
                   To the People.&rdquo;
-                </blockquote>
+                </blockquote> */}
 
                 <p className="mt-3 max-w-full break-words text-[10px] leading-5 text-white/65 sm:text-[11px]">
                   Serving communities with compassion since 18 July 2023.

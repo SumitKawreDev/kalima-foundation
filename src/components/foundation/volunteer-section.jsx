@@ -17,6 +17,7 @@ const socialLinks = [
   { label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=100069531152861' },
   { label: 'Instagram', href: 'https://www.instagram.com/kalima_fct' },
   { label: 'Telegram', href: 'https://t.me/kalimafct' },
+  { label: 'YouTube', href: 'https://www.youtube.com/@kalima-fct' },
 ]
 
 export function VolunteerSection() {

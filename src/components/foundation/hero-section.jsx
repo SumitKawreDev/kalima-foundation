@@ -116,20 +116,16 @@ export function HeroSection() {
       <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-16 pt-36 sm:px-8 sm:pb-20 sm:pt-40 lg:pb-28 lg:pt-48">
         <div className="hero-copy max-w-[920px]">
           <p data-hero-copy className="font-editorial text-base text-saffron sm:text-lg lg:text-xl">
-            परोपकारार्थ इदं शरीरम्
+            परोपकारार्थम् इदं शरीरम्
           </p>
          
           <span data-hero-copy className="mt-2 block h-px w-16 bg-gradient-to-r from-saffron via-saffron/60 to-transparent" aria-hidden="true" />
-          <h1 className="font-editorial mt-5 max-w-[920px] text-balance text-[clamp(2.15rem,8vw,5.35rem)] leading-[1.04] tracking-[-0.045em] text-[#fffaf0] sm:mt-7 sm:text-[clamp(2.5rem,5.6vw,5.35rem)]">
+          <h1 className="font-editorial mt-5 max-w-[920px] text-balance text-[clamp(1.9rem,5.2vw,3.75rem)] leading-[1.08] tracking-[-0.045em] text-[#fffaf0] sm:mt-7 sm:text-[clamp(2.25rem,4.4vw,3.75rem)]">
             <span className="block overflow-hidden pb-[0.14em] -mb-[0.14em]">
-              <span data-hero-line className="block will-change-transform">
-                A Global Medical City for
-              </span>
+              <span data-hero-line className="block will-change-transform">A Global Medical City for</span>
             </span>
             <span className="block overflow-hidden pb-[0.14em] -mb-[0.14em]">
-              <span data-hero-line className="block will-change-transform">
-                Advanced Care and Humanity
-              </span>
+              <span data-hero-line className="block will-change-transform"><span className="text-saffron/90">Advanced Care</span>{' '}and Humanity</span>
             </span>
           </h1>
           <p data-hero-copy className="mt-2 max-w-[680px] text-balance font-editorial text-base leading-6 text-saffron/90 sm:text-lg sm:leading-7">

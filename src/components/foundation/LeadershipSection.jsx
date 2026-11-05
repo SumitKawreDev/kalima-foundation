@@ -740,10 +740,10 @@ const BOARDS_DATA = [
     icon: GraduationCap,
     badgeStyle: 'text',
     members: [
-      { id: 'a-1', name: 'Dr. G M Kanthi', role: null, image: 'gm-kanthi.png' },
-      { id: 'a-2', name: 'Dr. Channabasavarajappa', role: null, image: 'channabasavarajappa.png' },
-      { id: 'a-3', name: 'Dr. A Revanna Swamy', role: 'Mauritius', image: 'revanna-swamy.png' },
-      { id: 'a-4', name: 'Dr. Farha Ansari', role: 'Maldives', image: 'farha-ansari.png' },
+      { id: 'a-1', name: 'Dr. G M Kanthi', role: 'Senior Advisor', image: 'gm-kanthi.png', badgeStyle: 'pill' },
+      { id: 'a-2', name: 'Dr. Channabasavarajappa', role: 'Advisor', image: 'channabasavarajappa.png', badgeStyle: 'pill' },
+      { id: 'a-3', name: 'Dr. A Revanna Swamy', role: 'Advisor', image: 'revanna-swamy.png', badgeStyle: 'pill' },
+      { id: 'a-4', name: 'Dr. Farha Ansari', role: 'Advisor', image: 'farha-ansari.png', badgeStyle: 'pill' },
     ],
   },
   {
@@ -752,20 +752,20 @@ const BOARDS_DATA = [
     description:
       "A diverse team of dedicated professionals driving the foundation's initiatives, organizational development and execution of its vision.",
     icon: Landmark,
-    badgeStyle: 'text',
+    badgeStyle: 'pill',
     members: [
-      { id: 'd-1', name: 'Dr. Vijaykumar Halli', role: null, image: 'vijaykumar-halli.png' },
-      { id: 'd-2', name: 'Dr. Murgesh Sunkad', role: null, image: 'murgesh-sunkad.png' },
-      { id: 'd-3', name: 'Dr. HariKrishna DS', role: null, image: 'harikrishna-ds.png' },
-      { id: 'd-4', name: 'Dr. Anamika Das', role: null, image: 'anamika-das.png' },
-      { id: 'd-5', name: 'Dr. Namira Sheikh', role: null, image: 'namira-sheikh.png' },
-      { id: 'd-6', name: 'Dr. Azma Ansar', role: null, image: 'azma-ansar.png' },
-      { id: 'd-7', name: 'Mr. Ramananda Shirva', role: null, image: 'ramananda-shirva.png' },
-      { id: 'd-8', name: 'Mr. Asrar Ahmed Katingeri', role: null, image: 'asrar-ahmed.png' },
-      { id: 'd-9', name: 'Mr. Habibur Rahman Jemai', role: null, image: 'habibur-rahman.png' },
-      { id: 'd-10', name: 'Mr. Farhathunnisa', role: null, image: 'farhathunnisa.png' },
-      { id: 'd-11', name: 'Mrs. Shabana Winfinith', role: null, image: 'shabana-winfinith.png' },
-      { id: 'd-12', name: 'Mrs. Farhana Razvi', role: null, image: 'farhana-razvi.png' },
+      { id: 'd-1', name: 'Dr. Vijaykumar Halli', role: 'Chief Project Advisor', image: 'vijaykumar-halli.png' },
+      { id: 'd-2', name: 'Dr. Murgesh B Sunkad', role: 'Chief Project Convenor', image: 'murgesh-sunkad.png' },
+      { id: 'd-3', name: 'Dr. Harikrishna D S', role: 'Public Relations Director', image: 'harikrishna-ds.png' },
+      { id: 'd-4', name: 'Dr. Anamika Das', role: 'Public Relations Director', image: 'anamika-das.png' },
+      { id: 'd-5', name: 'Dr. Namira Shaikh', role: 'Public Relations Director', image: 'namira-sheikh.png' },
+      { id: 'd-6', name: 'Dr. Azma Ansar (PT)', role: 'Public Relations Director', image: 'azma-ansar.png' },
+      { id: 'd-7', name: 'Mr. Ramananda Shirva', role: 'Tex Consultant', image: 'ramananda-shirva.png' },
+      { id: 'd-8', name: 'Mr. Asrar Ahmed Katingeri', role: 'IT Sector', image: 'asrar-ahmed.png' },
+      { id: 'd-9', name: 'Mr. Habibur Rahman Jemai', role: 'Free Medical Camp Convenor', image: 'habibur-rahman.png' },
+      { id: 'd-10', name: 'Ms. Farhathunnisa', role: 'Public Relations Director', image: 'farhathunnisa.png' },
+      { id: 'd-11', name: 'Mrs. Shabana Winfinith', role: 'Marketing Director', image: 'shabana-winfinith.png' },
+      { id: 'd-12', name: 'Mrs. Farhana Razvi', role: 'Public Relations Director', image: 'farhana-razvi.png' },
     ],
   },
 ]
@@ -833,7 +833,7 @@ function MemberCard({ member, badgeStyle, shouldReduceMotion }) {
 
           {member.role && (
             <div className="mt-2 flex w-full justify-center">
-              {badgeStyle === 'pill' ? (
+              {(member.badgeStyle ?? badgeStyle) === 'pill' ? (
                 <span className="inline-block w-full max-w-[95%] truncate rounded-full bg-saffron/20 px-2.5 py-1 text-[11px] font-semibold text-saffron">
                   {member.role}
                 </span>
