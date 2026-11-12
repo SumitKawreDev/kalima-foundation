@@ -126,7 +126,7 @@ export function SiteFooter() {
               <BrandLogo width={92} radius={16} alt="Kalima Foundation & Charitable Trust emblem" />
             </a>
             <p className="mt-4 text-[10px] font-extrabold uppercase tracking-[0.16em] text-saffron">
-              Kalima Foundation &amp; Charitable Trust (R.)
+              Kalima (R.) FCT(R.)
             </p>
             <p className="font-editorial mt-6 text-xl leading-snug text-white/90">Building Hope Through Healthcare.</p>
             <p className="mt-3 max-w-[360px] text-xs leading-6 text-white/70">
@@ -203,7 +203,7 @@ export function SiteFooter() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-5 text-[10px] text-white/65 sm:px-8">
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-            <span>© 2026 Kalima Foundation &amp; Charitable Trust (R.). All Rights Reserved.</span>
+            <span>© 2026 Kalima (R.) FCT(R.). All Rights Reserved.</span>
             <span className="inline-flex items-center gap-1.5">
               Built with compassion
               <Heart aria-hidden="true" className="size-3 fill-saffron/80 text-saffron" />

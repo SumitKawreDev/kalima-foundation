@@ -132,7 +132,7 @@ export function HeroSection() {
             Bringing healthcare, medical education, specialized care and research together.
           </p>
           <p data-hero-copy className="mt-4 max-w-[680px] text-sm leading-6 text-white/80 sm:text-base sm:leading-7">
-            Kalima Foundation (R.) &amp; Charitable Trust works to make quality healthcare more accessible through free medical camps, free medicine distribution and patient assistance.
+            Kalima (R.) FCT(R.) works to make quality healthcare more accessible through free medical camps, free medicine distribution and patient assistance.
           </p>
 
           <p data-hero-copy className="mt-3 max-w-[680px] text-sm leading-6 text-white/80 sm:text-base sm:leading-7">
@@ -185,14 +185,14 @@ export function HeroSection() {
         </div>
       </div>
 
-      <a
+      {/* <a
         href="#about"
         data-hero-copy
         className="group absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-[9px] font-bold uppercase tracking-[0.24em] text-white/50 transition-colors hover:text-saffron lg:bottom-28"
       >
         <span className="sr-only">Scroll to About</span>
         <ChevronDown aria-hidden="true" className="size-4" />
-      </a>
+      </a> */}
 
     </section>
   )

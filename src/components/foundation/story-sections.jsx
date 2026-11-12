@@ -127,7 +127,7 @@ export function AboutSection() {
             </h2>
 
             <p className="mt-6 max-w-[600px] break-words text-sm leading-7 text-ink/75 sm:text-base sm:leading-8">
-              Kalima Foundation &amp; Charitable Trust (R.), established on{' '}
+              Kalima (R.) FCT(R.), established on{' '}
               <strong className="font-bold text-forest">
                 18 July 2023
               </strong>
@@ -138,8 +138,7 @@ export function AboutSection() {
             <p className="mt-5 max-w-[620px] break-words text-sm leading-7 text-ink/75 sm:text-base sm:leading-8">
               We believe every person deserves proper medical care, essential
               medicines and opportunities for a better life. We organize free
-              medical camps and distribute generic medicines free of cost to
-              people in need.
+              medical camps and distribute free medicine to people in need
             </p>
             <p className="mt-5 max-w-[620px] break-words text-sm leading-7 text-ink/75 sm:text-base sm:leading-8">
               Our philosophy is simple:{' '}
@@ -332,7 +331,7 @@ export function VisionMissionSection() {
             </p>
 
             <h3 className="font-editorial mt-5 max-w-[620px] break-words text-[clamp(2.5rem,4.7vw,3.75rem)] leading-[1.08] tracking-[-0.035em] text-white">
-              Healthcare First. Patients Always.
+              Distribute Free Medicines to Deserving People
             </h3>
 
             <p className="mt-6 max-w-[570px] break-words text-sm leading-7 text-white/70 sm:text-base sm:leading-8">
@@ -454,7 +453,7 @@ export function FocusSection() {
         </figure>
 
         <p className="mx-auto mt-8 max-w-[760px] text-center text-sm leading-7 text-ink/70 sm:text-base sm:leading-8">
-          Kalima Foundation &amp; Charitable Trust is committed to taking
+          Kalima (R.) FCT(R.) is committed to taking
           healthcare closer to people facing financial and access barriers.
         </p>
 
@@ -586,9 +585,9 @@ export function MultiResearchCentreSection() {
                   {area}
                 </p>
 
-                <span className="mt-1 block text-[8px] font-extrabold uppercase tracking-[0.14em] text-forest/25 transition-colors duration-300 group-hover:text-saffron/70 sm:text-[9px]">
+                {/* <span className="mt-1 block text-[8px] font-extrabold uppercase tracking-[0.14em] text-forest/25 transition-colors duration-300 group-hover:text-saffron/70 sm:text-[9px]">
                   Response 0{index + 1}
-                </span>
+                </span> */}
               </div>
             </SpotlightCard>
           ))}
@@ -752,13 +751,13 @@ export function WhoWeServeSection() {
               aria-hidden="true"
             />
 
-            <figcaption className="absolute inset-x-0 bottom-0 z-10 box-border p-5 text-emerald-100 sm:p-6">
+            {/* <figcaption className="absolute inset-x-0 bottom-0 z-10 box-border p-5 text-emerald-100 sm:p-6">
               Education opens the door to a better future.
-            </figcaption>
+            </figcaption> */}
 
-            <span className="absolute right-4 top-4 z-10 inline-flex items-center gap-1.5 rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-[8px] font-extrabold uppercase tracking-[0.16em] text-white backdrop-blur-md">
+            {/* <span className="absolute right-4 top-4 z-10 inline-flex items-center gap-1.5 rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-[8px] font-extrabold uppercase tracking-[0.16em] text-white backdrop-blur-md">
               Hope in motion
-            </span>
+            </span> */}
           </figure>
         </div>
 

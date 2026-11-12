@@ -761,9 +761,9 @@ const BOARDS_DATA = [
       { id: 'd-5', name: 'Dr. Namira Shaikh', role: 'Public Relations Director', image: 'namira-sheikh.png' },
       { id: 'd-6', name: 'Dr. Azma Ansar (PT)', role: 'Public Relations Director', image: 'azma-ansar.png' },
       { id: 'd-7', name: 'Mr. Ramananda Shirva', role: 'Tex Consultant', image: 'ramananda-shirva.png' },
-      { id: 'd-8', name: 'Mr. Asrar Ahmed Katingeri', role: 'IT Sector', image: 'asrar-ahmed.png' },
+      { id: 'd-8', name: 'Mr. Asrar Ahmed Katingeri', role: 'IT & Digital Operation Director', image: 'asrar-ahmed.png' },
       { id: 'd-9', name: 'Mr. Habibur Rahman Jemai', role: 'Free Medical Camp Convenor', image: 'habibur-rahman.png' },
-      { id: 'd-10', name: 'Ms. Farhathunnisa', role: 'Public Relations Director', image: 'farhathunnisa.png' },
+      { id: 'd-10', name: 'Mrs. Farhathunnisa', role: 'Public Relations Director', image: 'farhathunnisa.png' },
       { id: 'd-11', name: 'Mrs. Shabana Winfinith', role: 'Marketing Director', image: 'shabana-winfinith.png' },
       { id: 'd-12', name: 'Mrs. Farhana Razvi', role: 'Public Relations Director', image: 'farhana-razvi.png' },
     ],
@@ -1289,8 +1289,8 @@ export default function LeadershipSection() {
           </h2>
 
           <p className="mt-3 max-w-[650px] text-sm leading-6 text-ink/75">
-            Kalima Foundation (R.) &amp; Charitable Trust is guided by a dedicated
-            team of trustees, advisors and directors who bring together
+            Kalima (R.) FCT(R.) is guided by a dedicated
+            team of Trustees, Advisors and Directors who bring together
             professional expertise, leadership and a shared commitment to
             humanity.
           </p>
