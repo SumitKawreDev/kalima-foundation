@@ -319,11 +319,13 @@ export default function AboutCampGallery() {
                         {/* Bottom Content Bar */}
                         <span className="pointer-events-none absolute inset-x-0 bottom-0 z-10 flex flex-col justify-end p-4 sm:p-5">
                           <span className="flex items-end justify-between gap-3">
-                            <span className="min-w-0 flex-1 text-left">
-                              <span className="block truncate text-base font-semibold tracking-tight text-white sm:text-lg">
-                                {image.caption}
+                            {viewMode !== 'uniform' && (
+                              <span className="min-w-0 flex-1 text-left">
+                                <span className="block truncate text-base font-semibold tracking-tight text-white sm:text-lg">
+                                  {image.caption}
+                                </span>
                               </span>
-                            </span>
+                            )}
 
                             <span className="grid size-9 shrink-0 place-items-center rounded-full border border-white/30 bg-white/10 text-white backdrop-blur-md transition-all duration-300 group-hover:rotate-45 group-hover:border-saffron group-hover:bg-saffron group-hover:text-forest">
                               <ArrowUpRight className="size-4" aria-hidden="true" />
