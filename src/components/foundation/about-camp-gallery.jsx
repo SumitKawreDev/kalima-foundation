@@ -532,7 +532,7 @@ export default function AboutCampGallery() {
                   showPrevious()
                 }}
                 aria-label="Show previous photograph"
-                className="absolute left-4 z-20 hidden size-12 place-items-center rounded-full border border-white/20 bg-black/40 text-white backdrop-blur-md transition hover:bg-saffron hover:text-forest sm:grid"
+                className="absolute left-2 top-1/2 z-20 grid size-10 -translate-y-1/2 place-items-center rounded-full border border-white/35 bg-[#021914]/80 text-white shadow-lg backdrop-blur-md transition hover:bg-saffron hover:text-forest sm:left-4 sm:size-12"
               >
                 <ChevronLeft className="size-5" />
               </button>
@@ -573,7 +573,7 @@ export default function AboutCampGallery() {
                   showNext()
                 }}
                 aria-label="Show next photograph"
-                className="absolute right-4 z-20 hidden size-12 place-items-center rounded-full border border-white/20 bg-black/40 text-white backdrop-blur-md transition hover:bg-saffron hover:text-forest sm:grid"
+                className="absolute right-2 top-1/2 z-20 grid size-10 -translate-y-1/2 place-items-center rounded-full border border-white/35 bg-[#021914]/80 text-white shadow-lg backdrop-blur-md transition hover:bg-saffron hover:text-forest sm:right-4 sm:size-12"
               >
                 <ChevronRight className="size-5" />
               </button>
