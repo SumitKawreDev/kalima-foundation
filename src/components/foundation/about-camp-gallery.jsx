@@ -4,11 +4,11 @@ import {
   ChevronLeft,
   ChevronRight,
   Expand,
+  Grid,
   LayoutGrid,
   Pause,
   Play,
   Rows3,
-  Sparkles,
   X,
 } from 'lucide-react'
 import { AnimatePresence, LayoutGroup, motion, useReducedMotion } from 'framer-motion'
@@ -29,45 +29,45 @@ const campImages = Object.entries(
 const campMeta = [
   {
     caption: 'Free medical camp',
-    tag: 'Medical Care',
     detail: 'On-site doctor consultations, vital screenings, and free medicine distribution.',
   },
   {
     caption: 'Community health outreach',
-    tag: 'Outreach',
     detail: 'Bringing preventive healthcare directly to underserved rural neighbourhoods.',
   },
   {
     caption: 'Health check-up drive',
-    tag: 'Diagnostics',
     detail: 'Early detection screenings for blood pressure, diabetes, and general wellness.',
   },
   {
     caption: 'Care in the community',
-    tag: 'Medical Care',
     detail: 'Dedicated volunteers and clinicians working side by side with local families.',
   },
   {
     caption: 'Serving families',
-    tag: 'Family Health',
     detail: 'Accessible pediatric, maternal, and elder care guidance under one roof.',
   },
   {
     caption: 'Moments from the field',
-    tag: 'Outreach',
     detail: 'Building lasting trust through compassionate, grassroots health initiatives.',
   },
   {
     caption: 'Together for better health',
-    tag: 'Family Health',
     detail: 'Empowering communities with health awareness and continuous follow-up support.',
   },
 ]
 
-const CATEGORIES = ['All', 'Medical Care', 'Outreach', 'Diagnostics', 'Family Health']
+// Clean, predictable bento spans without aspect-ratio distortion
+const getBentoSpan = (index, total) => {
+  const remaining = total - index
+  const remainder = total % 7
 
-// Repeating editorial bento pattern that scales cleanly for any number of images
-const getBentoSpan = (index) => {
+  if (remainder === 1 && remaining === 1) return 'sm:col-span-2 lg:col-span-4'
+  if (remainder === 2 && remaining <= 2) return 'sm:col-span-1 lg:col-span-2'
+  if (remainder === 3 && remaining === 1) return 'sm:col-span-2 lg:col-span-2'
+  if (remainder === 5 && remaining === 1) return 'sm:col-span-2 lg:col-span-4'
+  if (remainder === 6 && remaining === 1) return 'sm:col-span-2 lg:col-span-3'
+
   const pattern = index % 7
   if (pattern === 0) return 'sm:col-span-2 lg:col-span-2 lg:row-span-2'
   if (pattern === 3) return 'sm:col-span-2 lg:col-span-2'
@@ -77,11 +77,9 @@ const getBentoSpan = (index) => {
 
 export default function AboutCampGallery() {
   const [activeIndex, setActiveIndex] = useState(null)
-  const [selectedTag, setSelectedTag] = useState('All')
-  const [viewMode, setViewMode] = useState('bento') // 'bento' | 'showcase'
+  const [viewMode, setViewMode] = useState('uniform') // 'uniform' | 'bento' | 'showcase'
   const [showcaseIndex, setShowcaseIndex] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(false)
-  const [hoveredIndex, setHoveredIndex] = useState(null)
   const [direction, setDirection] = useState(0)
 
   const shouldReduceMotion = useReducedMotion()
@@ -93,11 +91,6 @@ export default function AboutCampGallery() {
       ...meta,
     }
   })
-
-  const filteredImages =
-    selectedTag === 'All'
-      ? enrichedImages
-      : enrichedImages.filter((img) => img.tag === selectedTag)
 
   const closeLightbox = useCallback(() => {
     setActiveIndex(null)
@@ -180,10 +173,11 @@ export default function AboutCampGallery() {
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         {/* Header Section */}
-        <div className="mb-8 flex flex-col gap-6 lg:mb-12 lg:flex-row lg:items-end lg:justify-between">
+        <div className="mb-9 flex flex-col gap-6 sm:mb-11 lg:flex-row lg:items-end lg:justify-between">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-forest/15 bg-forest/5 px-3.5 py-1.5">
-              <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-forest">
+            <div className="inline-flex items-center gap-2 rounded-full border border-forest/15 bg-white/70 px-3.5 py-1.5 shadow-sm">
+              <span className="size-1.5 rounded-full bg-saffron" aria-hidden="true" />
+              <span className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-forest">
                 Our Camps 
               </span>
             </div>
@@ -193,7 +187,7 @@ export default function AboutCampGallery() {
               <em className="font-normal text-saffron">ground.</em>
             </h2>
 
-            <p className="mt-4 max-w-[600px] text-sm leading-7 text-ink/75 sm:text-base">
+            <p className="mt-4 max-w-[600px] text-sm leading-7 text-ink/70 sm:text-base">
               A glimpse into our free medical camps, health check-ups and community outreach
               programmes — where care reaches the people who need it most.
             </p>
@@ -209,6 +203,22 @@ export default function AboutCampGallery() {
               <button
                 type="button"
                 onClick={() => {
+                  setViewMode('uniform')
+                  setIsAutoPlaying(false)
+                }}
+                className={`inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-xs font-semibold transition-all ${
+                  viewMode === 'uniform'
+                    ? 'bg-forest text-white shadow-sm'
+                    : 'text-forest/75 hover:text-forest'
+                }`}
+              >
+                <Grid className="size-3.5" />
+                Uniform Cards
+              </button>
+
+              {/* <button
+                type="button"
+                onClick={() => {
                   setViewMode('bento')
                   setIsAutoPlaying(false)
                 }}
@@ -220,7 +230,7 @@ export default function AboutCampGallery() {
               >
                 <LayoutGrid className="size-3.5" />
                 Bento Grid
-              </button>
+              </button> */}
 
               <button
                 type="button"
@@ -250,126 +260,80 @@ export default function AboutCampGallery() {
           </div>
         </div>
 
-        {/* Category Filter Pills (Active in Bento View) */}
-        {/* {viewMode === 'bento' && (
-          <div className="mb-8 flex items-center gap-2 overflow-x-auto pb-2 no-scrollbar">
-            {CATEGORIES.map((category) => {
-              const isSelected = selectedTag === category
-              const count =
-                category === 'All'
-                  ? enrichedImages.length
-                  : enrichedImages.filter((item) => item.tag === category).length
-
-              return (
-                <button
-                  key={category}
-                  type="button"
-                  onClick={() => setSelectedTag(category)}
-                  className={`relative shrink-0 rounded-full px-4 py-2 text-xs font-semibold transition-colors ${
-                    isSelected
-                      ? 'text-white'
-                      : 'border border-forest/15 bg-white/60 text-forest/80 hover:border-forest/35 hover:bg-white'
-                  }`}
-                >
-                  {isSelected && (
-                    <motion.span
-                      layoutId="activeFilterPill"
-                      className="absolute inset-0 rounded-full bg-forest shadow-sm"
-                      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                    />
-                  )}
-                  <span className="relative z-10 flex items-center gap-1.5">
-                    {category}
-                    <span
-                      className={`rounded-full px-1.5 py-0.5 text-[10px] ${
-                        isSelected ? 'bg-white/20 text-white' : 'bg-forest/10 text-forest/70'
-                      }`}
-                    >
-                      {count}
-                    </span>
-                  </span>
-                </button>
-              )
-            })}
-          </div>
-        )} */}
-
-        {/* VIEW 1: Animated Bento Grid */}
-        {viewMode === 'bento' ? (
+        {/* VIEW 1 & 2: Uniform Card Grid OR Balanced Bento Grid */}
+        {viewMode !== 'showcase' ? (
           <LayoutGroup>
             <motion.div
               layout
-              className="grid grid-cols-1 gap-4 sm:auto-rows-[230px] sm:grid-cols-2 sm:gap-5 lg:auto-rows-[215px] lg:grid-cols-4 xl:auto-rows-[235px]"
+              className={
+                viewMode === 'uniform'
+                  ? 'grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3'
+                  : 'grid grid-cols-1 gap-4 sm:auto-rows-[240px] sm:grid-cols-2 sm:gap-5 lg:auto-rows-[230px] lg:grid-cols-4'
+              }
             >
               <AnimatePresence mode="popLayout">
-                {filteredImages.map((image, idx) => {
-                  const isDimmed = hoveredIndex !== null && hoveredIndex !== image.id
+                {enrichedImages.map((image, idx) => {
+                  const spanClasses =
+                    viewMode === 'bento'
+                      ? `h-[260px] sm:h-full ${getBentoSpan(idx, enrichedImages.length)}`
+                      : 'aspect-[4/3] w-full'
 
                   return (
                     <motion.figure
                       layout
                       key={image.name}
-                      initial={shouldReduceMotion ? false : { opacity: 0, y: 24, scale: 0.96 }}
-                      animate={{
-                        opacity: isDimmed ? 0.65 : 1,
-                        y: 0,
-                        scale: 1,
-                      }}
-                      exit={{ opacity: 0, scale: 0.92 }}
+                      initial={shouldReduceMotion ? false : { opacity: 0, y: 20, scale: 0.97 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.94 }}
                       transition={{
-                        duration: 0.45,
-                        delay: shouldReduceMotion ? 0 : Math.min(idx, 8) * 0.05,
+                        duration: 0.4,
+                        delay: shouldReduceMotion ? 0 : Math.min(idx, 8) * 0.04,
                         ease: [0.22, 1, 0.36, 1],
                       }}
-                      onMouseEnter={() => setHoveredIndex(image.id)}
-                      onMouseLeave={() => setHoveredIndex(null)}
-                      className={`h-[260px] sm:h-full ${
-                        selectedTag === 'All' ? getBentoSpan(idx) : 'col-span-1 row-span-1'
-                      }`}
+                      className={spanClasses}
                     >
                       <motion.button
                         type="button"
                         onClick={() => setActiveIndex(image.id)}
                         aria-label={`Open photograph: ${image.caption}`}
-                        whileHover={shouldReduceMotion ? undefined : { y: -6 }}
+                        whileHover={shouldReduceMotion ? undefined : { y: -4 }}
                         whileTap={shouldReduceMotion ? undefined : { scale: 0.985 }}
-                        transition={{ duration: 0.3, ease: 'easeOut' }}
-                        className="group relative block size-full overflow-hidden rounded-2xl bg-forest/10 text-left shadow-[0_12px_32px_rgba(7,62,51,0.12)] ring-1 ring-forest/10 transition-shadow duration-500 hover:shadow-[0_24px_54px_rgba(7,62,51,0.28)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-saffron sm:rounded-3xl"
+                        transition={{ duration: 0.25, ease: 'easeOut' }}
+                        className="group relative block size-full overflow-hidden rounded-2xl bg-[#062820] text-left shadow-[0_10px_26px_rgba(7,62,51,0.08)] ring-1 ring-forest/10 transition-shadow duration-500 hover:shadow-[0_20px_40px_rgba(7,62,51,0.20)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-saffron sm:rounded-[24px]"
                       >
-                        {/* Image with Ken Burns zoom effect on hover */}
+                        {/* Edge-to-edge uniform cover image (eliminates black bars) */}
                         <img
                           src={image.src}
                           alt={`${image.caption} — Kalima Foundation (R.)`}
                           loading="lazy"
                           decoding="async"
-                          className="absolute inset-0 size-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-110"
+                          className="absolute inset-0 size-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
                         />
 
-                        {/* Multi-layered rich gradient overlay */}
+                        {/* Consistent multi-stop dark gradient for crisp text legibility */}
                         <span
-                          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#03231c]/95 via-[#03231c]/35 to-transparent opacity-85 transition-opacity duration-300 group-hover:opacity-95"
+                          className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#021914]/90 via-[#021914]/25 to-transparent opacity-85 transition-opacity duration-300 group-hover:opacity-95"
                           aria-hidden="true"
                         />
 
-                        {/* Bottom Bar: Caption, Expandable Description & Action Icon */}
-                        <span className="pointer-events-none absolute inset-x-0 bottom-0 flex flex-col justify-end p-4 sm:p-5">
+                        {/* Bottom Content Bar */}
+                        <span className="pointer-events-none absolute inset-x-0 bottom-0 z-10 flex flex-col justify-end p-4 sm:p-5">
                           <span className="flex items-end justify-between gap-3">
-                            <span className="min-w-0 text-left">
-                              <span className="mt-1 block truncate text-base font-semibold text-white sm:text-lg">
+                            <span className="min-w-0 flex-1 text-left">
+                              <span className="block truncate text-base font-semibold tracking-tight text-white sm:text-lg">
                                 {image.caption}
                               </span>
                             </span>
 
-                            <span className="grid size-9 shrink-0 place-items-center rounded-full border border-white/35 bg-white/10 text-white backdrop-blur-md transition-all duration-300 group-hover:rotate-45 group-hover:border-saffron group-hover:bg-saffron group-hover:text-forest">
+                            <span className="grid size-9 shrink-0 place-items-center rounded-full border border-white/30 bg-white/10 text-white backdrop-blur-md transition-all duration-300 group-hover:rotate-45 group-hover:border-saffron group-hover:bg-saffron group-hover:text-forest">
                               <ArrowUpRight className="size-4" aria-hidden="true" />
                             </span>
                           </span>
-
                         </span>
 
-                        {/* Inner glowing border on hover */}
+                        {/* Subtle inner border highlight on hover */}
                         <span
-                          className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10 transition-all duration-300 group-hover:ring-2 group-hover:ring-saffron/60 sm:rounded-3xl"
+                          className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/15 transition-all duration-300 group-hover:ring-2 group-hover:ring-saffron/70 sm:rounded-[24px]"
                           aria-hidden="true"
                         />
                       </motion.button>
@@ -380,21 +344,21 @@ export default function AboutCampGallery() {
             </motion.div>
           </LayoutGroup>
         ) : (
-          /* VIEW 2: Interactive Spotlight / Filmstrip Stage */
+          /* VIEW 3: Interactive Spotlight / Filmstrip Stage */
           <div className="overflow-hidden rounded-3xl border border-forest/15 bg-[#042820] p-4 text-white shadow-2xl sm:p-6 lg:p-8">
             <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 lg:items-center">
               {/* Main Featured Stage */}
-              <div className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-black/40 lg:col-span-8">
+              <div className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-[#021914] lg:col-span-8">
                 <AnimatePresence mode="wait">
                   <motion.img
                     key={featuredImage.name}
                     src={featuredImage.src}
                     alt={featuredImage.caption}
-                    initial={shouldReduceMotion ? false : { opacity: 0, scale: 1.04 }}
+                    initial={shouldReduceMotion ? false : { opacity: 0, scale: 1.03 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.98 }}
-                    transition={{ duration: 0.45, ease: 'easeOut' }}
-                    className="size-full object-cover"
+                    transition={{ duration: 0.4, ease: 'easeOut' }}
+                    className="size-full object-cover object-center"
                   />
                 </AnimatePresence>
 
@@ -413,13 +377,10 @@ export default function AboutCampGallery() {
               {/* Story Details & Controls */}
               <div className="flex flex-col justify-between space-y-6 lg:col-span-4 lg:px-2">
                 <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.2em] text-saffron">
-                    Field Spotlight
-                  </p>
-                  <h3 className="font-editorial mt-2 text-2xl leading-tight text-white sm:text-3xl">
+                  <h3 className="font-editorial text-2xl leading-tight text-white sm:text-3xl">
                     {featuredImage.caption}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-white/75">
+                  <p className="mt-3 max-w-prose text-sm leading-7 text-white/75">
                     {featuredImage.detail}
                   </p>
                 </div>
@@ -481,7 +442,7 @@ export default function AboutCampGallery() {
                     onClick={() => setShowcaseIndex(idx)}
                     className={`group relative h-16 w-24 shrink-0 overflow-hidden rounded-xl transition-all duration-300 sm:h-20 sm:w-28 ${
                       isCurrent
-                        ? 'ring-2 ring-saffron ring-offset-2 ring-offset-[#042820] scale-105'
+                        ? 'scale-105 ring-2 ring-saffron ring-offset-2 ring-offset-[#042820]'
                         : 'opacity-55 hover:opacity-90'
                     }`}
                   >
@@ -498,7 +459,7 @@ export default function AboutCampGallery() {
         )}
       </div>
 
-      {/* Enhanced Lightbox Modal with Thumbnails, Swipe & Slideshow */}
+      {/* Lightbox Modal (Preserves full uncropped aspect ratio when clicked) */}
       <AnimatePresence>
         {activeImage && (
           <motion.div
@@ -518,9 +479,8 @@ export default function AboutCampGallery() {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center gap-3">
-                <div className="hidden sm:block">
+                <div>
                   <p className="text-sm font-semibold text-white">{activeImage.caption}</p>
-                  <p className="text-xs text-white/60">{activeImage.detail}</p>
                 </div>
               </div>
 
@@ -546,11 +506,10 @@ export default function AboutCampGallery() {
                     </>
                   )}
                 </button>
-
               </div>
             </div>
 
-            {/* Main Interactive Image Stage (Supports Touch/Mouse Drag Swipe) */}
+            {/* Main Interactive Image Stage */}
             <div className="relative flex min-h-0 flex-1 items-center justify-center px-4 py-4 sm:px-16">
               <button
                 type="button"
@@ -558,11 +517,10 @@ export default function AboutCampGallery() {
                   event.stopPropagation()
                   closeLightbox()
                 }}
-                aria-label="Close photo and return to Moments from the ground"
-                title="Back to Moments from the ground"
-                className="absolute right-4 top-4 z-30 grid size-12 place-items-center rounded-full border-2 border-white/80 bg-[#021914] text-white shadow-xl transition hover:border-saffron hover:bg-saffron hover:text-forest focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:right-8 sm:top-6"
+                aria-label="Close photo and return to gallery"
+                className="absolute top-4 right-4 z-30 grid size-11 place-items-center rounded-full border border-white/30 bg-[#021914]/80 text-white shadow-xl backdrop-blur-md transition hover:border-saffron hover:bg-saffron hover:text-forest sm:top-6 sm:right-8"
               >
-                <X className="size-6" aria-hidden="true" />
+                <X className="size-5" aria-hidden="true" />
               </button>
 
               <button
