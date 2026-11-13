@@ -132,7 +132,7 @@ export function HeroSection() {
             Healthcare, education and community development, rooted in humanity.
           </p>
           <p data-hero-copy className="mt-4 max-w-[680px] text-sm leading-6 text-white/80 sm:text-base sm:leading-7">
-            Kalima (R.) FCT(R.) is a charitable organization working to make healthcare more accessible through free medical camps, free medicine distribution and patient assistance.
+            Kalima <span className="inline-block text-[1.5em] leading-none">®</span> FCT(R.) is a charitable organization working to make healthcare more accessible through free medical camps, free medicine distribution and patient assistance.
           </p>
 
           <p data-hero-copy className="mt-3 max-w-[680px] text-sm leading-6 text-white/80 sm:text-base sm:leading-7">

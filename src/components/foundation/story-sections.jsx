@@ -128,7 +128,7 @@ export function AboutSection() {
 </h2>
 
             <p className="mt-6 max-w-[600px] break-words text-sm leading-7 text-ink/75 sm:text-base sm:leading-8">
-              Kalima (R.) FCT(R.), established on{' '}
+              Kalima <span className="inline-block text-[1.5em] leading-none">®</span> FCT(R.), established on{' '}
               <strong className="font-bold text-forest">
                 18 July 2023
               </strong>
@@ -330,7 +330,7 @@ export function VisionMissionSection() {
             </p>
 
             <h3 className="font-editorial mt-5 max-w-[620px] break-words text-[clamp(2.5rem,4.7vw,3.75rem)] leading-[1.08] tracking-[-0.035em] text-white">
-              Distribute Free Medicines to Deserving People
+              Distribution of medicine to patients
             </h3>
 
             <p className="mt-6 max-w-[570px] break-words text-sm leading-7 text-white/70 sm:text-base sm:leading-8">
@@ -452,7 +452,7 @@ export function FocusSection() {
         </figure>
 
         <p className="mx-auto mt-8 max-w-[760px] text-center text-sm leading-7 text-ink/70 sm:text-base sm:leading-8">
-          Kalima (R.) FCT(R.) is committed to taking
+          Kalima <span className="inline-block text-[1.5em] leading-none">®</span> FCT(R.) is committed to taking
           healthcare closer to people facing financial and access barriers.
         </p>
 

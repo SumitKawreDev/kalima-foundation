@@ -9,7 +9,7 @@ import { SiteMotion } from './site-motion'
 export default function AboutUsPage() {
   useEffect(() => {
     const previousTitle = document.title
-    document.title = 'About Us | Kalima (R.) FCT(R.)'
+    document.title = 'About Us | Kalima ® FCT(R.)'
 
     return () => {
       document.title = previousTitle

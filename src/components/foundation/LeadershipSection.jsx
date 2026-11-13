@@ -1292,7 +1292,7 @@ export default function LeadershipSection() {
           </h2>
 
           <p className="mt-3 max-w-[650px] text-sm leading-6 text-ink/75">
-            Kalima (R.) FCT(R.) is guided by a dedicated
+            Kalima <span className="inline-block text-[1.5em] leading-none">®</span> FCT(R.) is guided by a dedicated
             team of Trustees, Advisors and Directors who bring together
             professional expertise, leadership and a shared commitment to
             humanity.

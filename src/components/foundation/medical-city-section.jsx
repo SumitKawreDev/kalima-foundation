@@ -77,7 +77,7 @@ export function MedicalCitySection() {
             Building a Global Hub for Healthcare, Medical Education &amp; Research.
           </p>
           <p className="mt-6 max-w-[780px] text-sm leading-7 text-ink/70 sm:text-base sm:leading-8">
-            The Global Medical City (GMC) is the flagship development vision of Kalima (R.) FCT(R.). Our aim is to establish an integrated medical ecosystem bringing healthcare and medical development facilities together. More than a hospital campus, GMC is envisioned as a comprehensive medical city where healthcare delivery, education, innovation, research and development work together.
+            The Global Medical City (GMC) is the flagship development vision of Kalima <span className="inline-block text-[1.5em] leading-none">®</span> FCT(R.). Our aim is to establish an integrated medical ecosystem bringing healthcare and medical development facilities together. More than a hospital campus, GMC is envisioned as a comprehensive medical city where healthcare delivery, education, innovation, research and development work together.
           </p>
         </div>
 

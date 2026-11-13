@@ -67,7 +67,7 @@ export default function AboutUsHeroSlider() {
             <div className="min-w-0">
               <p className="flex items-center gap-2 text-[9px] font-extrabold uppercase tracking-[0.2em] text-saffron sm:text-[10px]">
                 <span className="size-1.5 rounded-full bg-saffron" aria-hidden="true" />
-                About Kalima (R.) FCT(R.)
+                About Kalima <span className="inline-block text-[1.5em] leading-none">®</span> FCT(R.)
               </p>
 
               <p className="font-editorial mt-2 max-w-[34rem] text-[clamp(1.15rem,4.4vw,2rem)] leading-[1.12] tracking-[-0.03em] text-white">
