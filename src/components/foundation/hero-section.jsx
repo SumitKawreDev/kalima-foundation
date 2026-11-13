@@ -116,31 +116,30 @@ export function HeroSection() {
       <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-16 pt-36 sm:px-8 sm:pb-20 sm:pt-40 lg:pb-28 lg:pt-48">
         <div className="hero-copy max-w-[920px]">
           <p data-hero-copy className="font-editorial text-base text-saffron sm:text-lg lg:text-xl">
-            परोपकारार्थम् इदं शरीरम्
+           || परोपकारार्थं इदं शरीरम् ||
           </p>
          
           <span data-hero-copy className="mt-2 block h-px w-16 bg-gradient-to-r from-saffron via-saffron/60 to-transparent" aria-hidden="true" />
           <h1 className="font-editorial mt-5 max-w-[920px] text-balance text-[clamp(1.9rem,5.2vw,3.75rem)] leading-[1.08] tracking-[-0.045em] text-[#fffaf0] sm:mt-7 sm:text-[clamp(2.25rem,4.4vw,3.75rem)]">
             <span className="block overflow-hidden pb-[0.14em] -mb-[0.14em]">
-              <span data-hero-line className="block will-change-transform">A Global Medical City for</span>
+              <span data-hero-line className="block will-change-transform">A Healthier Future,</span>
             </span>
             <span className="block overflow-hidden pb-[0.14em] -mb-[0.14em]">
-              <span data-hero-line className="block will-change-transform"><span className="text-saffron/90">Advanced Care</span>{' '}and Humanity</span>
+              <span data-hero-line className="block will-change-transform">Built <span className="text-saffron/90">Together.</span></span>
             </span>
           </h1>
           <p data-hero-copy className="mt-2 max-w-[680px] text-balance font-editorial text-base leading-6 text-saffron/90 sm:text-lg sm:leading-7">
-            Bringing healthcare, medical education, specialized care and research together.
+            Healthcare, education and community development, rooted in humanity.
           </p>
           <p data-hero-copy className="mt-4 max-w-[680px] text-sm leading-6 text-white/80 sm:text-base sm:leading-7">
-            Kalima (R.) FCT(R.) works to make quality healthcare more accessible through free medical camps, free medicine distribution and patient assistance.
+            Kalima (R.) FCT(R.) is a charitable organization working to make healthcare more accessible through free medical camps, free medicine distribution and patient assistance.
           </p>
 
           <p data-hero-copy className="mt-3 max-w-[680px] text-sm leading-6 text-white/80 sm:text-base sm:leading-7">
-            Our vision is an integrated Global Medical City where hospitals, specialized care, medical education, multidisciplinary research and development work together.
-          </p>
+We are building a Global Medical City that unites care, education, and research to heal communities.          </p>
 
           <p data-hero-copy className="mt-4 font-editorial text-base text-saffron sm:text-lg lg:text-xl">
-            Our priority: patients first, humanity always.
+            Patients first. Humanity always.
           </p>
           <span data-hero-copy className="mt-2 block h-px w-16 bg-gradient-to-r from-saffron via-saffron/60 to-transparent" aria-hidden="true" />
           <div data-hero-copy className="mt-6 flex w-full max-w-[520px] flex-col gap-3 sm:w-auto sm:max-w-none sm:flex-row sm:flex-wrap sm:items-center">

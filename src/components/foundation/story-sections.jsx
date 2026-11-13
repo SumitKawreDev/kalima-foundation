@@ -56,7 +56,7 @@ const focusAreas = [
 
 const missionGoals = [
   'Organize free medical camps for underserved communities.',
-  'Distribute generic medicines free of cost to deserving patients.',
+  'Distribute medicines free of cost to   patients.',
   'Support individuals and families who need medical assistance.',
   'Develop an integrated Global Medical City.',
   'Establish medical education and college facilities.',
@@ -121,10 +121,11 @@ export function AboutSection() {
           <div data-reveal="left" className="min-w-0">
             <p className="eyebrow">Who we are</p>
 
-            <h2 className="font-editorial mt-5 max-w-[620px] break-words text-[clamp(2.7rem,5vw,3.9rem)] leading-[1.05] tracking-[-0.045em] text-forest">
-              A healthier future, built{' '}
-              <em className="font-normal text-saffron">together.</em>
-            </h2>
+      <h2 className="font-editorial mt-5 max-w-[620px] break-words text-[clamp(2.7rem,5vw,3.9rem)] leading-[1.05] tracking-[-0.045em] text-forest">
+  A Global Medical City for 
+  Advanced Care and{' '}
+  <em className="font-normal text-saffron">Humanity.</em>
+</h2>
 
             <p className="mt-6 max-w-[600px] break-words text-sm leading-7 text-ink/75 sm:text-base sm:leading-8">
               Kalima (R.) FCT(R.), established on{' '}
@@ -138,13 +139,11 @@ export function AboutSection() {
             <p className="mt-5 max-w-[620px] break-words text-sm leading-7 text-ink/75 sm:text-base sm:leading-8">
               We believe every person deserves proper medical care, essential
               medicines and opportunities for a better life. We organize free
-              medical camps and distribute free medicine to people in need
+              medical camps and distribute free medicine to people in need.
             </p>
             <p className="mt-5 max-w-[620px] break-words text-sm leading-7 text-ink/75 sm:text-base sm:leading-8">
-              Our philosophy is simple:{' '}
-              {/* <strong className="font-bold text-forest">
-                From the People, By the People, To the People.
-              </strong> */}
+              Our philosophy is simple: put patients first and treat every
+              person with compassion and dignity.
             </p>
             <p className="mt-5 max-w-[620px] break-words text-sm leading-7 text-ink/75 sm:text-base sm:leading-8">
               Our long-term vision is a Global Medical City integrating patient
@@ -152,8 +151,8 @@ export function AboutSection() {
               infrastructure, with patient welfare at its heart.
             </p>
             <p className="mt-5 max-w-[620px] break-words text-sm leading-7 text-ink/75 sm:text-base sm:leading-8">
-              We are committed to making healthcare accessibility and patient
-              welfare the heart of every initiative.
+              We are committed to making healthcare accessible and putting
+              patient welfare at the heart of every initiative.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-x-7 gap-y-3">
@@ -522,7 +521,7 @@ export function MultiResearchCentreSection() {
           <p className="eyebrow">Multidisciplinary research centre</p>
 
           <h2 className="font-editorial mt-5 max-w-[570px] break-words text-[clamp(2.7rem,4.8vw,3.8rem)] leading-[1.06] tracking-[-0.04em] text-forest">
-            Advancing Medical Knowledge Through Research
+            Advancing Medical Knowledge Through Research & Development
           </h2>
 
           <p className="mt-6 max-w-[560px] break-words text-sm leading-7 text-ink/70 sm:text-base sm:leading-8">
@@ -612,14 +611,14 @@ export function MedicalCollegeCitySection() {
     <section id="medical-education" className="bg-white py-10 sm:py-14">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:gap-16">
         <div data-reveal="left" className="min-w-0">
-          <p className="eyebrow">Global Medical College City</p>
+          <p className="eyebrow">Global Medical City</p>
           <h2 className="font-editorial mt-5 max-w-[620px] break-words text-[clamp(2.7rem,4.8vw,3.8rem)] leading-[1.06] tracking-[-0.04em] text-forest">
             Education. Research. Innovation. Healthcare.
           </h2>
           <p className="mt-6 max-w-[600px] text-sm leading-7 text-ink/70 sm:text-base sm:leading-8">
             Kalima Foundation aims to develop the Global Medical City as a
             medical education and healthcare destination. The proposed Medical
-            College City will create opportunities for students, doctors,
+             City will create opportunities for students, doctors,
             researchers and healthcare professionals.
           </p>
           <p className="mt-4 max-w-[600px] text-sm leading-7 text-ink/70 sm:text-base sm:leading-8">
